@@ -1,0 +1,110 @@
+.circle-decor {
+   position: relative;
+   display: inline-block;
+   width: 90px;
+   height: 90px;
+   background-color: var(--quizle-primary-color);
+   border-radius: 50%;
+   vertical-align: middle;
+   z-index: 3;
+   flex-shrink: 0;
+
+   @include tablet {
+      width: 70px;
+      height: 70px;
+   }
+
+   // @include mobile {
+   //    display: none;
+   // }
+}
+
+.arrow-decor {
+   width: 130px;
+   height: 42px;
+   position: absolute;
+   top: 50%;
+   transform: translate(20%, -50%);
+   vertical-align: middle;
+
+   @include tablet {
+      width: 100px;
+   }
+}
+
+.rectangle-decor {
+   display: inline-block;
+   width: 350px;
+   height: 90px;
+   background-color: var(--quizle-accent-light-color);
+   border-radius: 46px;
+   font-family: "Figtree", Arial, Helvetica, sans-serif;
+   font-size: 56px;
+   text-align: center;
+   padding: 8px 45px;
+   margin-left: -15px;
+   vertical-align: middle;
+   line-height: 1.2;
+   position: relative;
+
+   @include tablet {
+      width: 320px;
+      height: 80px;
+      font-size: 50px;
+   }
+
+   @include tablet-bottom {
+      width: 270px;
+      height: 70px;
+      font-size: 46px;
+   }
+
+   &::after {
+      content: "WordPress";
+      width: 123px;
+      height: 34px;
+      padding: 10px 12px;
+      background-color: var(--quizle-primary-color);
+      color: var(--quizle-primary-color-text);
+      border-radius: 20px;
+      font-family: "Figtree", Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      position: absolute;
+      top: -11px;
+      right: -11px;
+      font-weight: 500;
+
+      @include tablet-bottom {
+         top: -20px;
+      }
+   }
+}
+
+.arrow-down {
+   position: absolute;
+   top: 35px;
+   left: 30px;
+   width: 130px;
+   height: 130px;
+
+   @include desktop-bottom {
+      top: 40px;
+      left: 34px;
+      width: 100px;
+      height: 100px;
+   }
+
+   @include tablet {
+      top: 30px;
+      left: 25px;
+   }
+
+   @include tablet-bottom {
+      width: 90px;
+      height: 90px;
+   }
+
+   @include mobile {
+      display: none;
+   }
+}
