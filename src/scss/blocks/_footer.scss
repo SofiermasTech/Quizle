@@ -1,0 +1,133 @@
+.site-footer {
+   width: 100%;
+   margin: 0 auto;
+
+   &__inner {
+      @include flex-row-between;
+      padding-inline: 100px;
+
+      @include desktop-bottom {
+         padding-inline: 50px;
+      }
+
+      @include tablet-bottom {
+         padding-inline: 10px;
+      }
+
+      @include mobile {
+         flex-direction: column;
+         padding-inline: 20px;
+         gap: 30px;
+      }
+   }
+
+   &__company {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+   }
+
+   &__top {
+      margin-bottom: 10px;
+   }
+
+   &__title {
+      font-family: 'Figtree', Arial, Helvetica, sans-serif;
+      @include fluid-text(32, 24);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--quizle-primary-color);
+      margin-bottom: 0px;
+   }
+
+   &__description {
+      margin: 0;
+      font-weight: 400;
+   }
+
+   &__socials {
+      display: flex;
+      align-items: flex-start;
+      flex: 1;
+      gap: 16px;
+      margin-bottom: 16px;
+   }
+
+   &__social {
+      color: var(--quizle-base-dark-color);
+
+      @include hover {
+         color: var(--quizle-primary-color);
+      }
+
+      svg {
+         width: 30px;
+         height: 30px;
+      }
+   }
+
+   &__menu {
+      @include flex-row-between;
+      gap: 80px;
+
+      @include desktop-bottom {
+         gap: 40px;
+      }
+
+      @include tablet-bottom {
+         gap: 20px;
+      }
+   }
+
+   &__menu-title {
+      @include fluid-text(14, 12);
+      font-weight: 900;
+      margin-bottom: 10px;
+   }
+
+   &__menu-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 10px;
+   }
+
+   &__menu-item {
+      @include fluid-text(14, 12);
+      margin-bottom: 5px;
+
+      a {
+         text-decoration: none;
+
+         @include hover {
+            color: var(--quizle-primary-color);
+         }
+      }
+   }
+
+   &__logo-wpshop {
+
+      & a {
+         @include hover {
+            color: var(--quizle-primary-color);
+         }
+
+         svg {
+            margin-right: 5px;
+            color: var(--quizle-base-dark-color);
+
+            @include hover {
+               color: var(--quizle-primary-color);
+            }
+         }
+      }
+   }
+
+   &__logo-wpshop-content {
+      display: inline-block;
+      vertical-align: middle;
+
+      a {
+         text-decoration: none;
+      }
+   }
+}

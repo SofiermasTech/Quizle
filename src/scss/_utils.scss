@@ -1,0 +1,74 @@
+.section-wrap {
+   max-width: 1190px;
+   padding-inline: 20px;
+   margin-inline: auto;
+
+   @include desktop-bottom {
+     max-width: 960px;
+   }
+
+   @include tablet {
+      max-width: 720px;
+    }
+
+    @include tablet-bottom {
+     width: 100%;
+    }
+}
+
+.visually-hidden {
+   position: absolute !important;
+   margin: 0 !important;
+   padding: 0 !important;
+   width: 1px !important;
+   height: 1px !important;
+   white-space: nowrap !important;
+   -webkit-clip-path: inset(100%) !important;
+   clip-path: inset(100%) !important;
+   clip: rect(0 0 0 0) !important;
+   overflow: hidden !important;
+}
+
+.title {
+   @include fluid-text(48, 30);
+   font-weight: 900;
+   margin: 0;
+   display: inline-block;
+   vertical-align: middle;
+   text-transform: uppercase;
+   margin-bottom: 20px;
+   margin-top: 17px !important;
+   color: var(--quizle-base-dark-color);
+}
+
+.subtitle {
+   @include fluid-text(24, 16);
+}
+
+.subtitle--flex {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   gap: 60px;
+}
+
+.text-left {
+   text-align: left;
+}
+
+.text-right {
+   text-align: right;
+   margin-right: 45px;
+
+   @include desktop-bottom {
+      margin-right: 80px;
+   }
+
+   @include tablet {
+      margin-right: 55px;
+   }
+}
+
+.text-center {
+   text-align: center;
+}

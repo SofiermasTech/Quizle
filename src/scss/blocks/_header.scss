@@ -1,0 +1,52 @@
+.humburger {
+   top: 11px;
+}
+
+.site-branding {
+   &__body {}
+}
+
+.site-title {
+   font-family: 'Figtree', Arial, Helvetica, sans-serif;
+   color: var(--quizle-primary-color);
+   font-weight: 900;
+   margin: 0;
+}
+
+.header-flex {
+   @include flex-row-between;
+   align-items: center;
+}
+
+.main-navigation {
+   margin-bottom: 0;
+ 
+   &__list {
+      margin-left: 0;
+      margin-right: 0;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+   }
+
+   &__list-item {}
+
+   &__header-mobile-link.navigation-link-accent {
+      display: none;
+
+      @include tablet {
+         display: flex;
+      }
+   }
+}
+
+.main-navigation-inner {
+   padding: 0;
+}
+
+@media (min-width: 992px) {
+   .main-navigation ul li>a:before,
+   .main-navigation ul li>span:before {
+      display: none;
+   }
+}
