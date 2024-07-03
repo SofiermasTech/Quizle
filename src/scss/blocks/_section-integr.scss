@@ -2,6 +2,12 @@
    padding-block: var(--section-padding-y);
    background-color: var(--quizle-background-3);
 
+& .circle-decor {
+   @include mobile {
+      display: none;
+   }
+}
+
    &__wrap {
       margin: 0 auto;
    }
@@ -59,6 +65,12 @@
       margin: 0;
       background-color: #fff;
       position: relative;
+      transition: 0.3s;
+
+      @include hover {
+         opacity: 0.9;
+         scale: 1.03;
+       }
 
       & p {
          margin: 0;
@@ -74,15 +86,6 @@
       position: absolute;
       top: -20px;
       right: calc(50% - 20px);
-      width: 40px;
-      height: 40px;
-      padding: 10px 0;
-      border-radius: 50%;
-      background-color: var(--quizle-primary-color);
-      font-weight: 800;
-      text-align: center;
-      color: #fff;
-      font-size: 18px;
    }
 
 }
@@ -105,17 +108,9 @@
 
    &__card-number {
       display: inline-block;
-      width: 40px;
-      height: 40px;
-      padding: 10px 0;
-      border-radius: 50%;
-      background-color: var(--quizle-primary-color);
-      font-weight: 800;
-      text-align: center;
-      color: #fff;
-      font-size: 18px;
       vertical-align: bottom;
       margin-right: 5px;
+
 
       @include desktop-bottom {
          position: absolute;
@@ -181,6 +176,14 @@
       padding: 0;
       color: #fff;
       position: relative;
+      user-select: none;
+      transition: 0.2s;
+
+      @include hover {
+         opacity: 1;
+         scale: 1;
+       }
+
 
       @include tablet-bottom {
          & .btn-buy__icon {
@@ -196,6 +199,7 @@
 
       & a {
          color: #fff;
+         transition: all 0.2s;
       }
 
       @include hover {

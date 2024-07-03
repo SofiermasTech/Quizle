@@ -10,7 +10,7 @@ const avif = require('gulp-avif');
 const webp = require('gulp-webp');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
-const svgSprite = require('gulp-svg-sprite');
+//const svgSprite = require('gulp-svg-sprite');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const fonter = require('gulp-fonter');
 const includeFiles = require('gulp-include');
@@ -38,33 +38,33 @@ function fonts() {
 }
 
 function images() {
-   return src(['src/images/*.*', '!src/images/*.svg'])
-      .pipe(newer('src/images/dist'))
-      .pipe(avif({ quality: 50 }))
+   return src(['src/images/dist/*.*', '!src/images/*.svg'])
+      // .pipe(newer('src/images'))
+      // .pipe(avif({ quality: 50 }))
 
-      .pipe(src('src/images/*.*'))
-      .pipe(newer('src/images/dist'))
+      .pipe(src('src/images/dist/*.*'))
+      .pipe(newer('src/images'))
       .pipe(webp())
 
-      .pipe(src('src/images/*.*'))
-      .pipe(newer('src/images/dist'))
+      .pipe(src('src/images/dist*.*'))
+      .pipe(newer('src/images'))
       .pipe(imagemin())
 
-      .pipe(dest('src/images/dist'))
+      .pipe(dest('src/images'))
 }
 
-function sprite() {
-   return src('src/images/dist/*.svg')
-      .pipe(svgSprite({
-         mode: {
-            stack: {
-               sprite: '../sprite.svg',
-               example: true
-            }
-         }
-      }))
-      .pipe(dest('src/images/dist'))
-}
+// function sprite() {
+//    return src('src/images/dist/*.svg')
+//       .pipe(svgSprite({
+//          mode: {
+//             stack: {
+//                sprite: '../sprite.svg',
+//                example: true
+//             }
+//          }
+//       }))
+//       .pipe(dest('src/images'))
+// }
 
 function watching() {
    browserSync.init({
@@ -73,7 +73,7 @@ function watching() {
       }
    });
    watch(['src/scss/blocks/*.scss', 'src/scss/components/*.scss', 'src/scss/*.scss',], styles)
-   watch(['src/images'], images)
+   watch(['src/images/dist'], images)
    watch(['src/js/main.js'], scripts)
    watch(['src/content/**/*.html', 'src/pages/*'], pages).on(
       'change',
@@ -111,8 +111,8 @@ function building() {
    return src([
       'src/css/style.min.css',
       'src/images/*.*',
-      '!src/images/dist/*.svg',
-      'src/images/dist/sprite.svg',
+      //'!src/images/dist/*.svg',
+     // 'src/images/dist/sprite.svg',
       'src/fonts/*.*',
       'src/js/main.min.js',
       'src/**/*.html',
@@ -124,7 +124,7 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.pages = pages;
 exports.images = images;
-exports.sprite = sprite;
+//exports.sprite = sprite;
 exports.fonts = fonts;
 exports.watching = watching;
 exports.build = series(cleaning, building);

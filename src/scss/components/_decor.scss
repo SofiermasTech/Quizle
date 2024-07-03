@@ -13,10 +13,6 @@
       width: 70px;
       height: 70px;
    }
-
-   // @include mobile {
-   //    display: none;
-   // }
 }
 
 .arrow-decor {
@@ -28,55 +24,99 @@
    vertical-align: middle;
 
    @include tablet {
-      width: 100px;
+      width: 80px;
    }
+
+
 }
 
 .rectangle-decor {
    display: inline-block;
-   width: 350px;
-   height: 90px;
    background-color: var(--quizle-accent-light-color);
-   border-radius: 46px;
+   border-radius: 56px;
+   //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;;
    font-family: "Figtree", Arial, Helvetica, sans-serif;
-   font-size: 56px;
+   @include fluid-text(70, 38);
    text-align: center;
-   padding: 8px 45px;
+   padding: 8px 72px;
    margin-left: -15px;
    vertical-align: middle;
    line-height: 1.2;
    position: relative;
 
-   @include tablet {
-      width: 320px;
-      height: 80px;
-      font-size: 50px;
+   @include desktop-bottom {
+      padding-block: 16px;
    }
 
-   @include tablet-bottom {
-      width: 270px;
-      height: 70px;
-      font-size: 46px;
+   @include mobile {
+      order: 3;
+      border-radius: 12px;
+      height: 90px;
+      padding-top: 35px;
+      margin-left: 0;
+      width: 100%;
    }
 
    &::after {
       content: "WordPress";
-      width: 123px;
-      height: 34px;
-      padding: 10px 12px;
+      padding: 10px 26px;
       background-color: var(--quizle-primary-color);
       color: var(--quizle-primary-color-text);
-      border-radius: 20px;
+      border-radius: 30px;
+      //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;;
       font-family: "Figtree", Arial, Helvetica, sans-serif;
-      font-size: 14px;
+      font-size: 18px;
       position: absolute;
-      top: -11px;
-      right: -11px;
+      top: -23px;
+      right: -30px;
       font-weight: 500;
+      animation:
+         top-transform-decor-intro 1s,
+         rotate-decor-intro 1s ease-in-out 2;
 
       @include tablet-bottom {
          top: -20px;
       }
+
+      @include mobile {
+         right: calc(50% - 76px);
+         top: -15px;
+
+      }
+   }
+}
+
+@keyframes top-transform-decor-intro {
+   0% {
+      transform: translateY(-100%);
+      scale: 1.7;
+   }
+
+   100% {
+      transform: translateY(5%);
+      scale: 1;
+   }
+}
+
+@keyframes rotate-decor-intro {
+   0% {
+      rotate: 5deg;
+   }
+
+   25% {
+      rotate: -5deg;
+   }
+
+   50% {
+      rotate: 5deg;
+   }
+
+   75% {
+      rotate: -5deg;
+   }
+
+   100% {
+      rotate: 5deg;
    }
 }
 
@@ -84,25 +124,23 @@
    position: absolute;
    top: 35px;
    left: 30px;
-   width: 130px;
-   height: 130px;
+   width: 122px;
+   height: 122px;
 
    @include desktop-bottom {
       top: 40px;
       left: 34px;
-      width: 100px;
-      height: 100px;
+      width: 85px;
+      height: 85px;
    }
 
    @include tablet {
       top: 30px;
       left: 25px;
+      width: 82px;
+      height: 77px;
    }
 
-   @include tablet-bottom {
-      width: 90px;
-      height: 90px;
-   }
 
    @include mobile {
       display: none;

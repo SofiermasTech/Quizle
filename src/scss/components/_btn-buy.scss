@@ -28,11 +28,24 @@
    &__icon {
       position: absolute;
       bottom: -43px;
-      right: -63px;
+      right: -48px;
+      animation: shine-decor-btn 1s linear infinite alternate;
 
       @include mobile {
          bottom: -95px;
          right: 0px;
       }
+   }
+}
+
+@keyframes shine-decor-btn {
+   0% {
+      opacity: 0.3;
+      scale: 0.95;
+   }
+
+   100% {
+      opacity: 1;
+      scale: 1.05;
    }
 }

@@ -12,6 +12,8 @@
       media="all">
    <link rel="stylesheet" id="reboot-style-css"
       href="https://quizle.ru/wp-content/themes/reboot/assets/css/style.min.css?ver=1.5.2" media="all">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -22,7 +24,9 @@
          <div class="humburger js-humburger"><span></span><span></span><span></span></div>
          <div class="site-branding">
             <div class="site-branding__body">
-               <div class="site-title">Quizle</div>
+               <div class="site-title">
+                  <a href="https://quizle.ru">Quizle</a>
+               </div>
             </div>
          </div><!-- .site-branding -->
          <nav id="site-navigation" class="main-navigation fixed">
@@ -190,13 +194,13 @@
 
                      <div class="intro__bad-quize">
 
-                        <img src="../images/Intro-q2.png" alt="Пример стандартной формы" width="190" height="240">
+                        <img src="/images/intro-q2.webp" alt="Пример стандартной формы" width="190" height="240">
 
                      </div>
 
                      <div class="intro__good-quize">
 
-                        <img src="../images/Intro-q1.png" alt="Пример квиза от Quizle" width="230" height="380">
+                        <img src="/images/intro-q1.png" alt="Пример квиза от Quizle" width="230" height="380">
 
                      </div>
 
@@ -339,11 +343,27 @@
                         </svg>
                      </span>
                      <!-- </div> -->
-                     <div>
+                     <div style="position: relative;">
                         <h2 class="section-video__title title">Что может плагин?</h2>
                         <p class="section-video__subtitle subtitle">Квиз задает подготовленные вопросы посетителям, чтобы понять
                            их потребности и получить запрос. Далее собирает контактные данные. А на основе ответов показывает наиболее
                            подходящие товары или услуги.</p>
+                        <div class="section-video__sticker-for-video">
+                           <div class="sticker">
+                              <div class="section-video__sticker-info">
+                                 <span style="z-index: 5; text-transform: uppercase;">Посмотрите видео ниже</span>
+                                 <div style="z-index: 6;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 41 41">
+                                       <path fill="#fff"
+                                          d="M33.5 24.83c3.333-1.924 3.333-6.736 0-8.66L17.75 7.077c-3.333-1.925-7.5.48-7.5 4.33v18.186c0 3.85 4.167 6.255 7.5 4.33L33.5 24.83Z" />
+                                       <path fill="#c3f73a"
+                                          d="M30.5 23.098c2-1.155 2-4.041 0-5.196L17.75 10.54c-2-1.155-4.5.288-4.5 2.598V27.86c0 2.31 2.5 3.753 4.5 2.598L30.5 23.1Z" />
+                                    </svg>
+                                    <span>15 мин</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
                      </div>
                   </div>
                   <div class="section-video__content">
@@ -432,9 +452,7 @@
                               loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;"
                               allowfullscreen="allowfullscreen" title="Видео-обзор работы с плагином"></iframe>
                         </div>
-                        <span class="section-video__btn-play">15 мин</span>
                      </div>
-               
                
                   </div>
                
@@ -586,115 +604,119 @@
                         </div>
                      </div>
                      <div class="section-type-question__body">
-                        <div class="section-type-question__cards">
-                           <div class="section-type-question__card">
-                              <span class="section-type-question__card-number">1</span>
-                              <div class="section-type-question__card-text">
-                                 <h3>Строчка</h3>
-                                 <p>Для краткой текстовой или числовой информации.</p>
-                                 <p><strong>Например:</strong> данные клиента, размер кухни.</p>
+                        <div class="section-type-question__cards" data-mobile="false">
+                           <div class="section-type-question__cards-wrapper">
+                              <div class="section-type-question__card">
+                                 <span class="section-type-question__card-number">1</span>
+                                 <div class="section-type-question__card-text">
+                                    <h3>Строчка</h3>
+                                    <p>Для краткой текстовой или числовой информации.</p>
+                                    <p><strong>Например:</strong> данные клиента, размер кухни.</p>
+                                 </div>
+                                 <div class="section-type-question__card-img" width="200" height="200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 267 37">
+                                       <rect width="265.386" height="36" x=".852" y=".5" fill="#C3F73A" stroke="#C3F73A" rx="7.5" />
+                                       <path fill="#EBFFB8" d="M17.506 15h89.804v8H17.506z" />
+                                    </svg>
+                                 </div>
                               </div>
-                              <div class="section-type-question__card-img" width="200" height="200">
-                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 267 37">
-                                    <rect width="265.386" height="36" x=".852" y=".5" fill="#C3F73A" stroke="#C3F73A" rx="7.5"/>
-                                    <path fill="#EBFFB8" d="M17.506 15h89.804v8H17.506z"/>
-                                  </svg>
+                              <div class="section-type-question__card">
+                                 <span class="section-type-question__card-number">2</span>
+                                 <div class="section-type-question__card-text">
+                                    <h3>Ввод текста</h3>
+                                    <p>Для ввода объмного ответа.</p>
+                                    <p><strong>Например:</strong> для описания вида кухни, если в тесте не было подходящих
+                                       вариантов.</p>
+                                 </div>
+                                 <div class="section-type-question__card-img" width="200" height="200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 264 68">
+                                       <rect width="263" height="67" x=".5" y=".5" fill="#C3F73A" stroke="#C3F73A" rx="7.5" />
+                                       <path fill="#EBFFB8" d="M24 46h224v8H24zm0-32h198v8H24zm0 16h182v8H24z" />
+                                    </svg>
+                                 </div>
                               </div>
-                           </div>
-                           <div class="section-type-question__card">
-                              <span class="section-type-question__card-number">2</span>
-                              <div class="section-type-question__card-text">
-                                 <h3>Ввод текста</h3>
-                                 <p>Для ввода объмного ответа.</p>
-                                 <p><strong>Например:</strong> для описания вида кухни, если в тесте не было подходящих
-                                    вариантов.</p>
+                              <div class="section-type-question__card">
+                                 <span class="section-type-question__card-number">3</span>
+                                 <div class="section-type-question__card-text">
+                                    <h3>Варианты ответов</h3>
+                                    <p>Стандартные текстовые вопросы с единичным или множественным выбором ответа.</p>
+                                 </div>
+                                 <div class="section-type-question__card-img" width="200" height="200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 266 60">
+                                       <rect width="127.488" height="24" x=".5" y=".5" fill="#C3F73A" stroke="#C3F73A" rx="7.5" />
+                                       <rect width="127.488" height="24" x="137.5" y=".5" fill="#C3F73A" stroke="#C3F73A" rx="7.5" />
+                                       <rect width="127.488" height="24" x=".5" y="35.5" fill="#C3F73A" stroke="#C3F73A" rx="7.5" />
+                                       <rect width="127.488" height="24" x="137.5" y="35.5" fill="#C3F73A" stroke="#C3F73A" rx="7.5" />
+                                       <path fill="#EBFFB8" stroke="#fff"
+                                          d="M15.5 6.5h12v12h-12zm136 0h12v12h-12zm-136 35h12v12h-12zm136 0h12v12h-12z" />
+                                    </svg>
+                                 </div>
                               </div>
-                              <div class="section-type-question__card-img" width="200" height="200">
-                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 264 68">
-                                    <rect width="263" height="67" x=".5" y=".5" fill="#C3F73A" stroke="#C3F73A" rx="7.5" />
-                                    <path fill="#EBFFB8" d="M24 46h224v8H24zm0-32h198v8H24zm0 16h182v8H24z" />
-                                 </svg>
+                              <div class="section-type-question__card section-type-question__card--medium">
+                                 <span class="section-type-question__card-number">4</span>
+                                 <div class="section-type-question__card-text">
+                                    <h3>Варианты ответов с картинками</h3>
+                                    <p>Можно менять не только горизантальное или вертикальное расположение картинок, но и количество
+                                       колонок с
+                                       ответами.</p>
+                                 </div>
+                                 <div class="section-type-question__card-img" width="200" height="200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="158" height="92" fill="none">
+                                       <rect width="158" height="92" fill="#fff" rx="8" />
+                                       <rect width="29.95" height="39.065" x="9.162" y="25.392" fill="#C3F73A" rx="4" />
+                                       <rect width="29.95" height="39.065" x="44.321" y="25.392" fill="#C3F73A" rx="4" />
+                                       <rect width="29.95" height="39.065" x="79.48" y="25.392" fill="#C3F73A" rx="4" />
+                                       <rect width="29.95" height="39.065" x="114.638" y="25.392" fill="#C3F73A" rx="4" />
+                                       <path fill="#fff" stroke="#C3F73A"
+                                          d="M9.662 56.494h28.95v3.964a3.5 3.5 0 0 1-3.5 3.5h-21.95a3.5 3.5 0 0 1-3.5-3.5v-3.964ZM44.82 56.494h28.95v3.964a3.5 3.5 0 0 1-3.5 3.5H48.32a3.5 3.5 0 0 1-3.5-3.5v-3.964Z" />
+                                       <path fill="#EBFFB8" d="M9.162 12.371h75.526v5.209H9.162z" />
+                                       <path fill="#F7F7F7" d="M9.162 80.735h24.741v3.255H9.162z" />
+                                       <path fill="#EBFFB8" d="M119.847 75.526h24.741v8.464h-24.741z" />
+                                       <path fill="#F7F7F7" d="M92.501 76.828h16.928v5.86H92.501z" />
+                                       <path fill="#fff" stroke="#C3F73A"
+                                          d="M79.98 56.494h28.95v3.964a3.5 3.5 0 0 1-3.5 3.5H83.48a3.5 3.5 0 0 1-3.5-3.5v-3.964ZM115.138 56.494h28.95v3.964a3.5 3.5 0 0 1-3.5 3.5h-21.95a3.5 3.5 0 0 1-3.5-3.5v-3.964Z" />
+                                    </svg>
+                                    <svg class="section-type-question__card-img--second" xmlns="http://www.w3.org/2000/svg" width="162"
+                                       height="92" fill="none">
+                                       <rect width="162" height="92" fill="#fff" rx="8" />
+                                       <rect width="39.862" height="15.683" x="31.099" y="25.485" fill="#F7F7F7" rx="4" />
+                                       <rect width="39.862" height="15.683" x="106.248" y="25.485" fill="#F7F7F7" rx="4" />
+                                       <rect width="39.862" height="15.683" x="31.099" y="45.089" fill="#F7F7F7" rx="4" />
+                                       <rect width="39.862" height="15.683" x="106.248" y="45.089" fill="#F7F7F7" rx="4" />
+                                       <path fill="#EBFFB8" d="M10.188 12.416H85.99v5.228H10.188z" />
+                                       <path fill="#F7F7F7" d="M10.188 81.03H35.02v3.267H10.188z" />
+                                       <path fill="#EBFFB8" d="M121.278 75.802h24.832v8.495h-24.832z" />
+                                       <path fill="#F7F7F7" d="M93.832 77.109h16.99v5.881h-16.99z" />
+                                       <path fill="#C3F73A"
+                                          d="M10.188 29.485a4 4 0 0 1 4-4H35.02V41.17H14.188a4 4 0 0 1-4-4v-7.684ZM85.337 29.485a4 4 0 0 1 4-4h20.832V41.17H89.337a4 4 0 0 1-4-4v-7.684ZM10.188 49.09a4 4 0 0 1 4-4H35.02v15.683H14.188a4 4 0 0 1-4-4v-7.684ZM85.337 49.09a4 4 0 0 1 4-4h20.832v15.683H89.337a4 4 0 0 1-4-4v-7.684Z" />
+                                    </svg>
+                                 </div>
                               </div>
-                           </div>
-                           <div class="section-type-question__card">
-                              <span class="section-type-question__card-number">3</span>
-                              <div class="section-type-question__card-text">
-                                 <h3>Варианты ответов</h3>
-                                 <p>Стандартные текстовые вопросы с единичным или множественным выбором ответа.</p>
-                              </div>
-                              <div class="section-type-question__card-img" width="200" height="200">
-                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 266 60">
-                                    <rect width="127.488" height="24" x=".5" y=".5" fill="#C3F73A" stroke="#C3F73A" rx="7.5"/>
-                                    <rect width="127.488" height="24" x="137.5" y=".5" fill="#C3F73A" stroke="#C3F73A" rx="7.5"/>
-                                    <rect width="127.488" height="24" x=".5" y="35.5" fill="#C3F73A" stroke="#C3F73A" rx="7.5"/>
-                                    <rect width="127.488" height="24" x="137.5" y="35.5" fill="#C3F73A" stroke="#C3F73A" rx="7.5"/>
-                                    <path fill="#EBFFB8" stroke="#fff" d="M15.5 6.5h12v12h-12zm136 0h12v12h-12zm-136 35h12v12h-12zm136 0h12v12h-12z"/>
-                                  </svg>
-                              </div>
-                           </div>
-                           <div class="section-type-question__card section-type-question__card--medium">
-                              <span class="section-type-question__card-number">4</span>
-                              <div class="section-type-question__card-text">
-                                 <h3>Варианты ответов с картинками</h3>
-                                 <p>Можно менять не только горизантальное или вертикальное расположение картинок, но и количество
-                                    колонок с
-                                    ответами.</p>
-                              </div>
-                              <div class="section-type-question__card-img" width="200" height="200">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="158" height="92" fill="none">
-                                    <rect width="158" height="92" fill="#fff" rx="8" />
-                                    <rect width="29.95" height="39.065" x="9.162" y="25.392" fill="#C3F73A" rx="4" />
-                                    <rect width="29.95" height="39.065" x="44.321" y="25.392" fill="#C3F73A" rx="4" />
-                                    <rect width="29.95" height="39.065" x="79.48" y="25.392" fill="#C3F73A" rx="4" />
-                                    <rect width="29.95" height="39.065" x="114.638" y="25.392" fill="#C3F73A" rx="4" />
-                                    <path fill="#fff" stroke="#C3F73A"
-                                       d="M9.662 56.494h28.95v3.964a3.5 3.5 0 0 1-3.5 3.5h-21.95a3.5 3.5 0 0 1-3.5-3.5v-3.964ZM44.82 56.494h28.95v3.964a3.5 3.5 0 0 1-3.5 3.5H48.32a3.5 3.5 0 0 1-3.5-3.5v-3.964Z" />
-                                    <path fill="#EBFFB8" d="M9.162 12.371h75.526v5.209H9.162z" />
-                                    <path fill="#F7F7F7" d="M9.162 80.735h24.741v3.255H9.162z" />
-                                    <path fill="#EBFFB8" d="M119.847 75.526h24.741v8.464h-24.741z" />
-                                    <path fill="#F7F7F7" d="M92.501 76.828h16.928v5.86H92.501z" />
-                                    <path fill="#fff" stroke="#C3F73A"
-                                       d="M79.98 56.494h28.95v3.964a3.5 3.5 0 0 1-3.5 3.5H83.48a3.5 3.5 0 0 1-3.5-3.5v-3.964ZM115.138 56.494h28.95v3.964a3.5 3.5 0 0 1-3.5 3.5h-21.95a3.5 3.5 0 0 1-3.5-3.5v-3.964Z" />
-                                 </svg>
-                                 <svg class="section-type-question__card-img--second" xmlns="http://www.w3.org/2000/svg" width="162"
-                                    height="92" fill="none">
-                                    <rect width="162" height="92" fill="#fff" rx="8" />
-                                    <rect width="39.862" height="15.683" x="31.099" y="25.485" fill="#F7F7F7" rx="4" />
-                                    <rect width="39.862" height="15.683" x="106.248" y="25.485" fill="#F7F7F7" rx="4" />
-                                    <rect width="39.862" height="15.683" x="31.099" y="45.089" fill="#F7F7F7" rx="4" />
-                                    <rect width="39.862" height="15.683" x="106.248" y="45.089" fill="#F7F7F7" rx="4" />
-                                    <path fill="#EBFFB8" d="M10.188 12.416H85.99v5.228H10.188z" />
-                                    <path fill="#F7F7F7" d="M10.188 81.03H35.02v3.267H10.188z" />
-                                    <path fill="#EBFFB8" d="M121.278 75.802h24.832v8.495h-24.832z" />
-                                    <path fill="#F7F7F7" d="M93.832 77.109h16.99v5.881h-16.99z" />
-                                    <path fill="#C3F73A"
-                                       d="M10.188 29.485a4 4 0 0 1 4-4H35.02V41.17H14.188a4 4 0 0 1-4-4v-7.684ZM85.337 29.485a4 4 0 0 1 4-4h20.832V41.17H89.337a4 4 0 0 1-4-4v-7.684ZM10.188 49.09a4 4 0 0 1 4-4H35.02v15.683H14.188a4 4 0 0 1-4-4v-7.684ZM85.337 49.09a4 4 0 0 1 4-4h20.832v15.683H89.337a4 4 0 0 1-4-4v-7.684Z" />
-                                 </svg>
-                              </div>
-                           </div>
                
-                        </div>
-                        <div class="section-type-question__else">
-                           <span class="section-type-question__else-icon">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="142" height="124" fill="none">
-                                 <path fill="#9B81FF" fill-rule="evenodd"
-                                    d="M117.57 23.2a3.4 3.4 0 0 1 3.4 3.4v1.87a1.53 1.53 0 1 0 3.06 0V26.6a3.4 3.4 0 0 1 3.4-3.4h2.04a1.53 1.53 0 1 0 0-3.06h-1.955a3.485 3.485 0 0 1-3.485-3.485V14.53a1.53 1.53 0 1 0-3.06 0v2.125a3.485 3.485 0 0 1-3.485 3.485h-1.955a1.53 1.53 0 1 0 0 3.06h2.04ZM46.57 10.2a3.4 3.4 0 0 1 3.4 3.4v1.87a1.53 1.53 0 1 0 3.06 0V13.6a3.4 3.4 0 0 1 3.4-3.4h2.04a1.53 1.53 0 0 0 0-3.06h-1.955a3.485 3.485 0 0 1-3.485-3.485V1.53a1.53 1.53 0 1 0-3.06 0v2.125a3.485 3.485 0 0 1-3.485 3.485H44.53a1.53 1.53 0 0 0 0 3.06h2.04ZM123.83 90.8a4.6 4.6 0 0 1 4.6 4.6v2.53a2.07 2.07 0 0 0 4.14 0V95.4a4.6 4.6 0 0 1 4.6-4.6h2.76a2.07 2.07 0 0 0 0-4.14h-2.645a4.715 4.715 0 0 1-4.715-4.715V79.07a2.07 2.07 0 0 0-4.14 0v2.875a4.715 4.715 0 0 1-4.715 4.715h-2.645a2.07 2.07 0 0 0 0 4.14h2.76ZM5.66 55.6a5 5 0 0 1 5 5v3.06a2.34 2.34 0 1 0 4.68 0V60.6a5 5 0 0 1 5-5h3.32a2.34 2.34 0 1 0 0-4.68h-3.32a5 5 0 0 1-5-5v-3.58a2.34 2.34 0 0 0-4.68 0v3.58a5 5 0 0 1-5 5H2.34a2.34 2.34 0 0 0 0 4.68h3.32ZM83.52 119.2a2.4 2.4 0 0 1 2.4 2.4v1.32a1.08 1.08 0 0 0 2.16 0v-1.32a2.4 2.4 0 0 1 2.4-2.4h1.44a1.08 1.08 0 1 0 0-2.16h-1.38a2.46 2.46 0 0 1-2.46-2.46v-1.5a1.08 1.08 0 0 0-2.16 0v1.5a2.46 2.46 0 0 1-2.46 2.46h-1.38a1.08 1.08 0 0 0 0 2.16h1.44ZM60.12 76.2a5 5 0 0 1 5 5v4.92a2.88 2.88 0 0 0 5.76 0V81.2a5 5 0 0 1 5-5h5.24a2.88 2.88 0 1 0 0-5.76h-5.24a5 5 0 0 1-5-5v-5.56a2.88 2.88 0 1 0-5.76 0v5.56a5 5 0 0 1-5 5h-5.24a2.88 2.88 0 1 0 0 5.76h5.24ZM92.52 41.2a2.4 2.4 0 0 1 2.4 2.4v1.32a1.08 1.08 0 1 0 2.16 0V43.6a2.4 2.4 0 0 1 2.4-2.4h1.44a1.08 1.08 0 0 0 0-2.16h-1.38a2.46 2.46 0 0 1-2.46-2.46v-1.5a1.08 1.08 0 0 0-2.16 0v1.5a2.46 2.46 0 0 1-2.46 2.46h-1.38a1.08 1.08 0 0 0 0 2.16h1.44Z"
-                                    clip-rule="evenodd" />
-                              </svg>
-                           </span>
-                           <div class="section-type-question__else-list">
-                              <h3>А еще можно:</h3>
-                              <ul>
-                                 <li>Добавлять описание к правильным ответам</li>
-                                 <li>Размещать вопросы отдельными слайдами или целым списком</li>
-                                 <li>Настраивать отображение результатов с добавлением ссылок на продукты или услуги</li>
-                              </ul>
                            </div>
+                           <div class="swiper-pagination"></div>
+                        </div>
+                     </div>
+                     <div class="section-type-question__else">
+                        <span class="section-type-question__else-icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="142" height="124" fill="none">
+                              <path fill="#9B81FF" fill-rule="evenodd"
+                                 d="M117.57 23.2a3.4 3.4 0 0 1 3.4 3.4v1.87a1.53 1.53 0 1 0 3.06 0V26.6a3.4 3.4 0 0 1 3.4-3.4h2.04a1.53 1.53 0 1 0 0-3.06h-1.955a3.485 3.485 0 0 1-3.485-3.485V14.53a1.53 1.53 0 1 0-3.06 0v2.125a3.485 3.485 0 0 1-3.485 3.485h-1.955a1.53 1.53 0 1 0 0 3.06h2.04ZM46.57 10.2a3.4 3.4 0 0 1 3.4 3.4v1.87a1.53 1.53 0 1 0 3.06 0V13.6a3.4 3.4 0 0 1 3.4-3.4h2.04a1.53 1.53 0 0 0 0-3.06h-1.955a3.485 3.485 0 0 1-3.485-3.485V1.53a1.53 1.53 0 1 0-3.06 0v2.125a3.485 3.485 0 0 1-3.485 3.485H44.53a1.53 1.53 0 0 0 0 3.06h2.04ZM123.83 90.8a4.6 4.6 0 0 1 4.6 4.6v2.53a2.07 2.07 0 0 0 4.14 0V95.4a4.6 4.6 0 0 1 4.6-4.6h2.76a2.07 2.07 0 0 0 0-4.14h-2.645a4.715 4.715 0 0 1-4.715-4.715V79.07a2.07 2.07 0 0 0-4.14 0v2.875a4.715 4.715 0 0 1-4.715 4.715h-2.645a2.07 2.07 0 0 0 0 4.14h2.76ZM5.66 55.6a5 5 0 0 1 5 5v3.06a2.34 2.34 0 1 0 4.68 0V60.6a5 5 0 0 1 5-5h3.32a2.34 2.34 0 1 0 0-4.68h-3.32a5 5 0 0 1-5-5v-3.58a2.34 2.34 0 0 0-4.68 0v3.58a5 5 0 0 1-5 5H2.34a2.34 2.34 0 0 0 0 4.68h3.32ZM83.52 119.2a2.4 2.4 0 0 1 2.4 2.4v1.32a1.08 1.08 0 0 0 2.16 0v-1.32a2.4 2.4 0 0 1 2.4-2.4h1.44a1.08 1.08 0 1 0 0-2.16h-1.38a2.46 2.46 0 0 1-2.46-2.46v-1.5a1.08 1.08 0 0 0-2.16 0v1.5a2.46 2.46 0 0 1-2.46 2.46h-1.38a1.08 1.08 0 0 0 0 2.16h1.44ZM60.12 76.2a5 5 0 0 1 5 5v4.92a2.88 2.88 0 0 0 5.76 0V81.2a5 5 0 0 1 5-5h5.24a2.88 2.88 0 1 0 0-5.76h-5.24a5 5 0 0 1-5-5v-5.56a2.88 2.88 0 1 0-5.76 0v5.56a5 5 0 0 1-5 5h-5.24a2.88 2.88 0 1 0 0 5.76h5.24ZM92.52 41.2a2.4 2.4 0 0 1 2.4 2.4v1.32a1.08 1.08 0 1 0 2.16 0V43.6a2.4 2.4 0 0 1 2.4-2.4h1.44a1.08 1.08 0 0 0 0-2.16h-1.38a2.46 2.46 0 0 1-2.46-2.46v-1.5a1.08 1.08 0 0 0-2.16 0v1.5a2.46 2.46 0 0 1-2.46 2.46h-1.38a1.08 1.08 0 0 0 0 2.16h1.44Z"
+                                 clip-rule="evenodd" />
+                           </svg>
+                        </span>
+                        <div class="section-type-question__else-list">
+                           <h3>А еще можно:</h3>
+                           <ul>
+                              <li>Добавлять описание к правильным ответам</li>
+                              <li>Размещать вопросы отдельными слайдами или целым списком</li>
+                              <li>Настраивать отображение результатов с добавлением ссылок на продукты или услуги</li>
+                           </ul>
                         </div>
                      </div>
                   </div>
                </section>
-               <section id="#categories" class="categiries site-content fixed">
+               <section id="categories" class="categiries site-content fixed">
                   <div class="section-heading">
                      <div>
                         <h2 class="categiries__title title">Готовые шаблоны</h2>
@@ -704,15 +726,78 @@
                            примеров под разные ниши.
                         </p>
                      </div>
+                     <div class="categiries__sticker">
+                        <div class="sticker">
+                           <div class="categiries__sticker-info" style="z-index: 5;">
+                              <svg xmlns="http://www.w3.org/2000/svg" style="z-index: 5;" fill="none" viewBox="0 0 20 20">
+                                 <path stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 11v6a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6m4-3h6v6M8 12 19 1" />
+                              </svg>
+                              <span style="z-index: 5;">Нажмите на квиз, чтобы пройти его демо-версию</span>
+                           </div>
+                        </div>
+                     </div>
                   </div>
+               
+                  <button class="btn-filter-mobile" type="button" onclick="toggleFilters()">
+               
+                     <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+               
+                        <path fill="#000" fill-rule="evenodd"
+               
+                           d="M14.388 9.708a3.108 3.108 0 0 1 3.112 3.096 3.108 3.108 0 0 1-3.112 3.096c-1.717 0-3.114-1.389-3.114-3.096s1.397-3.096 3.114-3.096Zm0 1.5c-.89 0-1.614.716-1.614 1.596 0 .881.724 1.596 1.614 1.596.889 0 1.612-.715 1.612-1.596 0-.88-.723-1.596-1.612-1.596Zm-7.308.885a.75.75 0 0 1 0 1.5H.78a.75.75 0 0 1 0-1.5h6.3ZM3.113 0a3.109 3.109 0 0 1 3.113 3.097c0 1.707-1.396 3.095-3.113 3.095C1.397 6.192 0 4.804 0 3.097A3.11 3.11 0 0 1 3.113 0Zm0 1.5c-.889 0-1.613.716-1.613 1.597 0 .88.724 1.595 1.613 1.595.89 0 1.613-.715 1.613-1.595 0-.881-.723-1.597-1.613-1.597Zm13.078.9a.75.75 0 0 1 0 1.5h-6.3a.75.75 0 0 1 0-1.5h6.3Z"
+               
+                           clip-rule="evenodd" />
+               
+                     </svg>
+               
+                     <p>Фильтры</p>
+               
+                  </button>
+               
+                  
+               
+                  <!-- <button class="btn-filter-mobile" type="button" onclick="toggleFilters()">
+               
+                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                        <circle cx="10" cy="10" r="9.5" stroke="#222"></circle>
+               
+                        <path
+               
+                           d="M13.823 13.9991C13.8004 13.9777 13.7783 13.9559 13.7563 13.9336L6.04048 6.10099C6.0268 6.0871 6.0134 6.07327 6 6.0592"
+               
+                           stroke="#222" stroke-linecap="round" stroke-linejoin="round"></path>
+               
+                        <path
+               
+                           d="M14.0002 6C13.9789 6.02298 13.9571 6.04572 13.935 6.06824L6.16737 13.9534C6.15369 13.9672 6.13983 13.9811 6.12598 13.9947"
+               
+                           stroke="#222" stroke-linecap="round" stroke-linejoin="round"></path>
+               
+                     </svg>
+               
+                     <p>Скрыть фильтры</p>
+               
+                  </button> -->
                
                   <form class="categiries__filters-list" name="filters">
                      <div class="categiries__filters-list-container" role="tablist">
-                        <div class="categiries__filter-item filter-item" id="all" role="tab" aria-selected="false">
-                           <label class="filter-item__label">
-                              <input class="filter-item__input visually-hidden" type="checkbox" name="category" value="Все категории">
-                              <span>Все категории</span>
-                           </label>
+                        <div class="categiries__filter-item filter-item all-categories js-filter-item active" role="tab" aria-selected="false"
+                           data-id="all">
+                           <label for="all" class="filter-item__label"><span>Все категории</span></label>
+                           <input id="all" class="filter-item__input visually-hidden" type="checkbox" name="category"
+                              value="Все категории">
+                           
+                        </div>
+               
+                        
+               
+                        <div class="categiries__filter-item filter-item js-filter-item" role="tab" aria-selected="true"
+                           data-id="furniture">
+                           <label for="furniture" class="filter-item__label"><span>Расчет стоимости мебели</span></label>
+                           <input id="furniture" class="filter-item__input visually-hidden" type="checkbox" name="category"
+                              value="Расчет стоимости мебели">
                            <button class="filter-item__btn" type="button">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
@@ -725,12 +810,11 @@
                               </svg>
                            </button>
                         </div>
-                        <div class="categiries__filter-item filter-item active" id="furniture" role="tab" aria-selected="true">
-                           <label class="filter-item__label">
-                              <input class="filter-item__input visually-hidden" type="checkbox" name="category"
-                                 value="Расчет стоимости мебели">
-                              <span>Расчет стоимости мебели</span>
-                           </label>
+               
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="kitchen">
+                           <label for="kitchen" class="filter-item__label"><span>Кухни на заказ</span></label>
+                           <input id="kitchen" class="filter-item__input visually-hidden" type="checkbox" name="category"
+                              value="Кухни на заказ">
                            <button class="filter-item__btn" type="button">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
@@ -743,11 +827,11 @@
                               </svg>
                            </button>
                         </div>
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false">
-                           <label class="filter-item__label">
-                              <input class="filter-item__input visually-hidden" type="checkbox" name="category" value="Кухни на заказ">
-                              <span>Кухни на заказ</span>
-                           </label>
+               
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="health">
+                           <label for="health" class="filter-item__label"><span>Питание и здоровье</span></label>
+                           <input id="health" class="filter-item__input visually-hidden" type="checkbox" name="category"
+                              value="Питание и здоровье">
                            <button class="filter-item__btn" type="button">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
@@ -760,12 +844,11 @@
                               </svg>
                            </button>
                         </div>
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false">
-                           <label class="filter-item__label">
-                              <input class="filter-item__input visually-hidden" type="checkbox" name="category"
-                                 value="Питание и здоровье">
-                              <span>Питание и здоровье</span>
-                           </label>
+               
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="tours">
+                           <label for="tours" class="filter-item__label"><span>Подбор туров для турагентств</span></label>
+                           <input id="tours" class="filter-item__input visually-hidden" type="checkbox" name="category"
+                              value="Подбор туров для турагентств">
                            <button class="filter-item__btn" type="button">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
@@ -778,12 +861,11 @@
                               </svg>
                            </button>
                         </div>
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false">
-                           <label class="filter-item__label">
-                              <input class="filter-item__input visually-hidden" type="checkbox" name="category"
-                                 value="Подбор туров для турагентств">
-                              <span>Подбор туров для турагентств</span>
-                           </label>
+               
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="realty">
+                           <label for="realty" class="filter-item__label"><span>Квизы по недвижимости</span></label>
+                           <input id="realty" class="filter-item__input visually-hidden" type="checkbox" name="category"
+                              value="Квизы по недвижимости">
                            <button class="filter-item__btn" type="button">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
@@ -796,12 +878,11 @@
                               </svg>
                            </button>
                         </div>
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false">
-                           <label class="filter-item__label">
-                              <input class="filter-item__input visually-hidden" type="checkbox" name="category"
-                                 value="Квизы по недвижимости">
-                              <span>Квизы по недвижимости</span>
-                           </label>
+               
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="courses">
+                           <label for="courses" class="filter-item__label"><span>Подбор подходящих курсов</span></label>
+                           <input id="courses" class="filter-item__input visually-hidden" type="checkbox" name="category"
+                              value="Подбор подходящих курсов">
                            <button class="filter-item__btn" type="button">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
@@ -814,12 +895,11 @@
                               </svg>
                            </button>
                         </div>
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false">
-                           <label class="filter-item__label">
-                              <input class="filter-item__input visually-hidden" type="checkbox" name="category"
-                                 value="Подбор подходящих курсов">
-                              <span>Подбор подходящих курсов</span>
-                           </label>
+               
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="cars">
+                           <label for="cars" class="filter-item__label"><span>Автоподбор</span></label>
+                           <input id="cars" class="filter-item__input visually-hidden" type="checkbox" name="category"
+                              value="Автоподбор">
                            <button class="filter-item__btn" type="button">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
@@ -832,11 +912,11 @@
                               </svg>
                            </button>
                         </div>
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false">
-                           <label class="filter-item__label">
-                              <input class="filter-item__input visually-hidden" type="checkbox" name="category" value="Автоподбор">
-                              <span>Автоподбор</span>
-                           </label>
+               
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="interior">
+                           <label for="interior" class="filter-item__label"><span>Дизайн интерьеров</span></label>
+                           <input id="interior" class="filter-item__input visually-hidden" type="checkbox" name="category"
+                              value="Дизайн интерьеров">
                            <button class="filter-item__btn" type="button">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
@@ -849,29 +929,10 @@
                               </svg>
                            </button>
                         </div>
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false">
-                           <label class="filter-item__label">
-                              <input class="filter-item__input visually-hidden" type="checkbox" name="category"
-                                 value="Дизайн интерьеровя">
-                              <span>Дизайн интерьеров</span>
-                           </label>
-                           <button class="filter-item__btn" type="button">
-                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
-                                 <path
-                                    d="M13.823 13.9991C13.8004 13.9777 13.7783 13.9559 13.7563 13.9336L6.04048 6.10099C6.0268 6.0871 6.0134 6.07327 6 6.0592"
-                                    stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
-                                 <path
-                                    d="M14.0002 6C13.9789 6.02298 13.9571 6.04572 13.935 6.06824L6.16737 13.9534C6.15369 13.9672 6.13983 13.9811 6.12598 13.9947"
-                                    stroke="white" stroke-linecap="round" stroke-linejoin="round"></path>
-                              </svg>
-                           </button>
-                        </div>
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false">
-                           <label class="filter-item__label">
-                              <input class="filter-item__input visually-hidden" type="checkbox" name="category" value="Другие">
-                              <span>Другие</span>
-                           </label>
+               
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="other">
+                           <label for="other" class="filter-item__label"><span>Другие</span></label>
+                           <input id="other" class="filter-item__input visually-hidden" type="checkbox" name="category" value="Другие">
                            <button class="filter-item__btn" type="button">
                               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <circle cx="10" cy="10" r="9.5" stroke="white"></circle>
@@ -889,13 +950,13 @@
                
                   <div class="section-quize-cards__container">
                
-                     <div class="section-quize-cards__content">
+                     <ul class="section-quize-cards__content">
                
                   
                
-                        <div class="quize-card quize-card--big" data-category="Расчет стоимости мебели">
+                        <li class="quize-card quize-card--big furniture" data-category="furniture">
                
-                           <img class="quize-card__img quize-card__img--big" src="../images/dist/wardrobe-renovation-concept.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="/images/furniture-1.webp" alt="">
                
                            <div>
                
@@ -933,13 +994,13 @@
                
                            <a class="quize-card__link" href="https://quizle.ru/shablon-kviza-stoimost-shkafa-kupe/" target="_blank"></a>
                
-                        </div>
+                        </li>
                
                   
                
-                        <div class="quize-card" data-category="Недвижимость">
+                        <li class="quize-card realty" data-category="realty">
                
-                           <img class="quize-card__img" src="../images/dist/quize-cards-1.webp" alt="">
+                           <img class="quize-card__img" src="/images/realty-1.webp" alt="">
                
                            <div class="quize-card__description">
                
@@ -977,13 +1038,13 @@
                
                            <a class="quize-card__link" href="https://quizle.ru/kviz-podbora-kvartiry/" target="_blank"></a>
                
-                        </div>
+                        </li>
                
                   
                
-                        <div class="quize-card" data-category="Подбор туров для турагентств">
+                        <li class="quize-card tours" data-category="tours">
                
-                           <img class="quize-card__img" src="../images/dist/travel-bg.webp" alt="">
+                           <img class="quize-card__img" src="/images/tours-1.webp" alt="">
                
                            <div class="quize-card__description">
                
@@ -1021,13 +1082,13 @@
                
                            <a class="quize-card__link" href="https://quizle.ru/shablon-kviza-podbor-tura/" target="_blank"></a>
                
-                        </div>
+                        </li>
                
                   
                
-                        <div class="quize-card quize-card--big" data-category="Кухни на заказ">
+                        <li class="quize-card quize-card--big kitchen" data-category="kitchen">
                
-                           <img class="quize-card__img quize-card__img--big" src="../images/dist/quizle-kitchen-3-2.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="/images/kitchen-1.webp" alt="">
                
                            <div>
                
@@ -1067,13 +1128,13 @@
                
                            <a class="quize-card__link" href="https://quizle.ru/shablon-kviza-kuhni-na-zakaz/" target="_blank"></a>
                
-                        </div>
+                        </li>
                
                   
                
-                        <div class="quize-card" data-category="Другие">
+                        <li class="quize-card other" data-category="other">
                
-                           <img class="quize-card__img" src="../images/dist/magic.webp" alt="">
+                           <img class="quize-card__img" src="/images/other-1.webp" alt="">
                
                            <div class="quize-card__description">
                
@@ -1113,13 +1174,13 @@
                
                               target="_blank"></a>
                
-                        </div>
+                        </li>
                
                   
                
-                        <div class="quize-card" data-category="По питанию и здоровью">
+                        <li class="quize-card health" data-category="health">
                
-                           <img class="quize-card__img" src="../images/dist/jars-with-natural-herbs.webp" alt="">
+                           <img class="quize-card__img" src="/images/health-1.webp" alt="">
                
                            <div class="quize-card__description">
                
@@ -1135,11 +1196,11 @@
                
                               <span class="quize-card__icon-head">
                
-                                 <svg width="10" height="10" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <svg width="10" height="10" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                
                                     <path
                
-                                       d="M23.625 0H4.375C3.21508 0.00130272 2.10304 0.462657 1.28285 1.28285C0.462657 2.10304 0.00130272 3.21508 0 4.375L0 23.625C0.00130272 24.7849 0.462657 25.897 1.28285 26.7172C2.10304 27.5373 3.21508 27.9987 4.375 28H23.625C24.7849 27.9987 25.897 27.5373 26.7172 26.7172C27.5373 25.897 27.9987 24.7849 28 23.625V4.375C27.9987 3.21508 27.5373 2.10304 26.7172 1.28285C25.897 0.462657 24.7849 0.00130272 23.625 0ZM25.375 23.625C25.375 24.0891 25.1906 24.5342 24.8624 24.8624C24.5342 25.1906 24.0891 25.375 23.625 25.375H4.375C3.91087 25.375 3.46575 25.1906 3.13756 24.8624C2.80937 24.5342 2.625 24.0891 2.625 23.625V4.375C2.625 3.91087 2.80937 3.46575 3.13756 3.13756C3.46575 2.80937 3.91087 2.625 4.375 2.625H23.625C24.0891 2.625 24.5342 2.80937 24.8624 3.13756C25.1906 3.46575 25.375 3.91087 25.375 4.375V23.625ZM22.4104 8.22227C22.5324 8.3446 22.629 8.4898 22.6947 8.64955C22.7604 8.8093 22.794 8.98046 22.7934 9.1532C22.7929 9.32595 22.7582 9.49688 22.6914 9.6562C22.6247 9.81552 22.5271 9.9601 22.4044 10.0816L13.5997 18.8316C13.354 19.0765 13.0213 19.2141 12.6744 19.2145H12.6602C12.4863 19.2124 12.3146 19.1759 12.155 19.107C11.9954 19.0381 11.8511 18.9382 11.7305 18.813L7.38281 14.2953C7.26226 14.1714 7.16738 14.0249 7.10361 13.8642C7.03984 13.7035 7.00845 13.5318 7.01123 13.359C7.01401 13.1861 7.05091 13.0155 7.11981 12.857C7.18871 12.6984 7.28825 12.555 7.41273 12.4351C7.5372 12.3151 7.68414 12.2209 7.84513 12.1579C8.00611 12.0949 8.17795 12.0643 8.35079 12.0679C8.52363 12.0714 8.69406 12.1091 8.85229 12.1788C9.01051 12.2484 9.15343 12.3486 9.27281 12.4737L12.6968 16.0284L20.5543 8.2168C20.8012 7.9714 21.1354 7.83411 21.4835 7.83514C21.8316 7.83616 22.165 7.97542 22.4104 8.22227Z"
+                                       d="M26.5733 20.7004C27.1422 21.2701 27.1422 22.1873 26.5733 22.7474L21.7523 27.5752C21.4727 27.8552 21.0967 28 20.7303 28C20.3639 28 19.9879 27.8552 19.7082 27.5752C19.573 27.4413 19.4656 27.282 19.3923 27.1063C19.319 26.9306 19.2812 26.7421 19.2812 26.5517C19.2812 26.3613 19.319 26.1727 19.3923 25.997C19.4656 25.8214 19.573 25.662 19.7082 25.5282L22.0609 23.1722H17.3556C17.1724 23.1722 16.9892 23.1336 16.8253 23.066H16.806C16.6324 22.9888 16.4685 22.8825 16.3335 22.7474L9.04419 15.4477H1.4463C0.646014 15.4477 0 14.8008 0 13.9994C0 13.198 0.646014 12.5511 1.4463 12.5511H9.04419L16.3335 5.25144C16.4685 5.11626 16.6324 5.01005 16.806 4.93281H16.8253C16.9892 4.86522 17.1628 4.82659 17.3556 4.82659H22.0609L19.7082 2.47063C19.1394 1.90095 19.1394 0.983671 19.7082 0.423647C20.2771 -0.136377 21.1931 -0.146033 21.7523 0.423647L26.5733 5.25144C27.1422 5.82112 27.1422 6.7384 26.5733 7.29842L21.7523 12.1262C21.4727 12.4062 21.0967 12.5511 20.7303 12.5511C20.3639 12.5511 19.9879 12.4062 19.7082 12.1262C19.573 11.9924 19.4656 11.833 19.3923 11.6573C19.319 11.4816 19.2812 11.2931 19.2812 11.1027C19.2812 10.9123 19.319 10.7238 19.3923 10.5481C19.4656 10.3724 19.573 10.213 19.7082 10.0792L22.0609 7.72327H17.9534L11.6861 13.9994L17.9534 20.2755H22.0609L19.7082 17.9196C19.1394 17.3499 19.1394 16.4326 19.7082 15.8726C20.2771 15.3126 21.1931 15.3029 21.7523 15.8726L26.5733 20.7004Z"
                
                                        fill="currentColor" />
                
@@ -1147,7 +1208,7 @@
                
                               </span>
                
-                              <span class="quize-card__text-head">Тестирование</span>
+                              <span class="quize-card__text-head">Вариативный</span>
                
                               <span style="font-size: 12px; color: #444545;">&#124;</span>
                
@@ -1157,13 +1218,13 @@
                
                            <a class="quize-card__link" href="https://quizle.ru/test-kakoi-vy-chai/" target="_blank"></a>
                
-                        </div>
+                        </li>
                
                   
                
-                        <div class="quize-card" data-category="Дизайн интерьеров">
+                        <li class="quize-card interior" data-category="interior">
                
-                           <img class="quize-card__img" src="../images/dist/gardins.webp" alt="">
+                           <img class="quize-card__img" src="/images/interior-1.webp" alt="">
                
                            <div class="quize-card__description">
                
@@ -1201,13 +1262,13 @@
                
                            <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-shtor/" target="_blank"></a>
                
-                        </div>
+                        </li>
                
                   
                
-                        <div class="quize-card" data-category="Автоподбор">
+                        <li class="quize-card cars" data-category="cars">
                
-                           <img class="quize-card__img" src="../images/dist/auto-remont.webp" alt="">
+                           <img class="quize-card__img" src="/images/cars-1.webp" alt="">
                
                            <div class="quize-card__description">
                
@@ -1245,15 +1306,13 @@
                
                            <a class="quize-card__link" href="https://quizle.ru/kviz-remont-avto/" target="_blank"></a>
                
-                        </div>
+                        </li>
                
                   
                
-                        <div class="quize-card quize-card--big" data-category="Подбор курсов">
+                        <li class="quize-card quize-card--big courses" data-category="courses">
                
-                           <img class="quize-card__img quize-card__img--big" src="../images/dist/man-tuning-guitar-medium-shot.webp"
-               
-                              alt="">
+                           <img class="quize-card__img quize-card__img--big" src="/images/courses-1.webp" alt="">
                
                            <div>
                
@@ -1293,11 +1352,685 @@
                
                            <a class="quize-card__link" href="https://quizle.ru/shablon-kviza-igra-na-gitare/" target="_blank"></a>
                
-                        </div>
+                        </li>
                
                   
                
-                     </div>
+                        <li class="quize-card furniture" data-category="furniture">
+               
+                           <img class="quize-card__img" src="/images/furniture-2.webp" alt="">
+               
+                           <div class="quize-card__description">
+               
+                              <h3 class="quize-card__title">Калькулятор окон ПВХ</h3>
+               
+                              <p class="quize-card__text">Заполните все поля этой формы, и получите скидку 10% за заказ.
+               
+                                 На основании введенных данных наш менеджер выполнит расчёт.</p>
+               
+                           </div>
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <svg width="10" height="10" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                    <path
+               
+                                       d="M26.5733 20.7004C27.1422 21.2701 27.1422 22.1873 26.5733 22.7474L21.7523 27.5752C21.4727 27.8552 21.0967 28 20.7303 28C20.3639 28 19.9879 27.8552 19.7082 27.5752C19.573 27.4413 19.4656 27.282 19.3923 27.1063C19.319 26.9306 19.2812 26.7421 19.2812 26.5517C19.2812 26.3613 19.319 26.1727 19.3923 25.997C19.4656 25.8214 19.573 25.662 19.7082 25.5282L22.0609 23.1722H17.3556C17.1724 23.1722 16.9892 23.1336 16.8253 23.066H16.806C16.6324 22.9888 16.4685 22.8825 16.3335 22.7474L9.04419 15.4477H1.4463C0.646014 15.4477 0 14.8008 0 13.9994C0 13.198 0.646014 12.5511 1.4463 12.5511H9.04419L16.3335 5.25144C16.4685 5.11626 16.6324 5.01005 16.806 4.93281H16.8253C16.9892 4.86522 17.1628 4.82659 17.3556 4.82659H22.0609L19.7082 2.47063C19.1394 1.90095 19.1394 0.983671 19.7082 0.423647C20.2771 -0.136377 21.1931 -0.146033 21.7523 0.423647L26.5733 5.25144C27.1422 5.82112 27.1422 6.7384 26.5733 7.29842L21.7523 12.1262C21.4727 12.4062 21.0967 12.5511 20.7303 12.5511C20.3639 12.5511 19.9879 12.4062 19.7082 12.1262C19.573 11.9924 19.4656 11.833 19.3923 11.6573C19.319 11.4816 19.2812 11.2931 19.2812 11.1027C19.2812 10.9123 19.319 10.7238 19.3923 10.5481C19.4656 10.3724 19.573 10.213 19.7082 10.0792L22.0609 7.72327H17.9534L11.6861 13.9994L17.9534 20.2755H22.0609L19.7082 17.9196C19.1394 17.3499 19.1394 16.4326 19.7082 15.8726C20.2771 15.3126 21.1931 15.3029 21.7523 15.8726L26.5733 20.7004Z"
+               
+                                       fill="currentColor" />
+               
+                                 </svg>
+               
+                              </span>
+               
+                              <span class="quize-card__text-head">Вариативный</span>
+               
+                              <span style="font-size: 12px; color: #444545; padding: 0 2px;">&#124;</span>
+               
+                              <span class="quize-card__text-head">Про мебель</span>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-ustanovka-plastikovyh-okon/" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card other" data-category="other">
+               
+                           <img class="quize-card__img" src="/images/other-2.webp" alt="">
+               
+                           <div class="quize-card__description">
+               
+                              <h3 class="quize-card__title">Как хорошо ты знаешь Android?</h3>
+               
+                              <p class="quize-card__text">Пройди тест и узнай. Возможно, у тебя есть будущее в IT-сфере.</p>
+               
+                           </div>
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <span class="quize-card__icon-head">
+               
+                                    <svg width="10" height="10" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                       <path
+               
+                                          d="M23.625 0H4.375C3.21508 0.00130272 2.10304 0.462657 1.28285 1.28285C0.462657 2.10304 0.00130272 3.21508 0 4.375L0 23.625C0.00130272 24.7849 0.462657 25.897 1.28285 26.7172C2.10304 27.5373 3.21508 27.9987 4.375 28H23.625C24.7849 27.9987 25.897 27.5373 26.7172 26.7172C27.5373 25.897 27.9987 24.7849 28 23.625V4.375C27.9987 3.21508 27.5373 2.10304 26.7172 1.28285C25.897 0.462657 24.7849 0.00130272 23.625 0ZM25.375 23.625C25.375 24.0891 25.1906 24.5342 24.8624 24.8624C24.5342 25.1906 24.0891 25.375 23.625 25.375H4.375C3.91087 25.375 3.46575 25.1906 3.13756 24.8624C2.80937 24.5342 2.625 24.0891 2.625 23.625V4.375C2.625 3.91087 2.80937 3.46575 3.13756 3.13756C3.46575 2.80937 3.91087 2.625 4.375 2.625H23.625C24.0891 2.625 24.5342 2.80937 24.8624 3.13756C25.1906 3.46575 25.375 3.91087 25.375 4.375V23.625ZM22.4104 8.22227C22.5324 8.3446 22.629 8.4898 22.6947 8.64955C22.7604 8.8093 22.794 8.98046 22.7934 9.1532C22.7929 9.32595 22.7582 9.49688 22.6914 9.6562C22.6247 9.81552 22.5271 9.9601 22.4044 10.0816L13.5997 18.8316C13.354 19.0765 13.0213 19.2141 12.6744 19.2145H12.6602C12.4863 19.2124 12.3146 19.1759 12.155 19.107C11.9954 19.0381 11.8511 18.9382 11.7305 18.813L7.38281 14.2953C7.26226 14.1714 7.16738 14.0249 7.10361 13.8642C7.03984 13.7035 7.00845 13.5318 7.01123 13.359C7.01401 13.1861 7.05091 13.0155 7.11981 12.857C7.18871 12.6984 7.28825 12.555 7.41273 12.4351C7.5372 12.3151 7.68414 12.2209 7.84513 12.1579C8.00611 12.0949 8.17795 12.0643 8.35079 12.0679C8.52363 12.0714 8.69406 12.1091 8.85229 12.1788C9.01051 12.2484 9.15343 12.3486 9.27281 12.4737L12.6968 16.0284L20.5543 8.2168C20.8012 7.9714 21.1354 7.83411 21.4835 7.83514C21.8316 7.83616 22.165 7.97542 22.4104 8.22227Z"
+               
+                                          fill="currentColor" />
+               
+                                    </svg>
+               
+                                 </span>
+               
+                                 <span class="quize-card__text-head">Тестирование</span>
+               
+                                 <span style="font-size: 12px; color: #444545;">&#124;</span>
+               
+                                 <span class="quize-card__text-head">Другие</span>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/test-na-znanie-os-android/" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card quize-card--big interior" data-category="interior">
+               
+                           <img class="quize-card__img quize-card__img--big" src="/images/interior-2.webp" alt="">
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <svg width="10" height="10" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                    <path
+               
+                                       d="M23.625 0H4.375C3.21508 0.00130272 2.10304 0.462657 1.28285 1.28285C0.462657 2.10304 0.00130272 3.21508 0 4.375L0 23.625C0.00130272 24.7849 0.462657 25.897 1.28285 26.7172C2.10304 27.5373 3.21508 27.9987 4.375 28H23.625C24.7849 27.9987 25.897 27.5373 26.7172 26.7172C27.5373 25.897 27.9987 24.7849 28 23.625V4.375C27.9987 3.21508 27.5373 2.10304 26.7172 1.28285C25.897 0.462657 24.7849 0.00130272 23.625 0ZM25.375 23.625C25.375 24.0891 25.1906 24.5342 24.8624 24.8624C24.5342 25.1906 24.0891 25.375 23.625 25.375H4.375C3.91087 25.375 3.46575 25.1906 3.13756 24.8624C2.80937 24.5342 2.625 24.0891 2.625 23.625V4.375C2.625 3.91087 2.80937 3.46575 3.13756 3.13756C3.46575 2.80937 3.91087 2.625 4.375 2.625H23.625C24.0891 2.625 24.5342 2.80937 24.8624 3.13756C25.1906 3.46575 25.375 3.91087 25.375 4.375V23.625ZM22.4104 8.22227C22.5324 8.3446 22.629 8.4898 22.6947 8.64955C22.7604 8.8093 22.794 8.98046 22.7934 9.1532C22.7929 9.32595 22.7582 9.49688 22.6914 9.6562C22.6247 9.81552 22.5271 9.9601 22.4044 10.0816L13.5997 18.8316C13.354 19.0765 13.0213 19.2141 12.6744 19.2145H12.6602C12.4863 19.2124 12.3146 19.1759 12.155 19.107C11.9954 19.0381 11.8511 18.9382 11.7305 18.813L7.38281 14.2953C7.26226 14.1714 7.16738 14.0249 7.10361 13.8642C7.03984 13.7035 7.00845 13.5318 7.01123 13.359C7.01401 13.1861 7.05091 13.0155 7.11981 12.857C7.18871 12.6984 7.28825 12.555 7.41273 12.4351C7.5372 12.3151 7.68414 12.2209 7.84513 12.1579C8.00611 12.0949 8.17795 12.0643 8.35079 12.0679C8.52363 12.0714 8.69406 12.1091 8.85229 12.1788C9.01051 12.2484 9.15343 12.3486 9.27281 12.4737L12.6968 16.0284L20.5543 8.2168C20.8012 7.9714 21.1354 7.83411 21.4835 7.83514C21.8316 7.83616 22.165 7.97542 22.4104 8.22227Z"
+               
+                                       fill="currentColor" />
+               
+                                 </svg>
+               
+                              </span>
+               
+                              <span class="quize-card__text-head">Тестирование</span>
+               
+                              <span style="font-size: 12px; color: #444545; padding: 0 2px;">&#124;</span>
+               
+                              <span class="quize-card__text-head">Дизайн интерьеров</span>
+               
+                              <div class="quize-card__description quize-card__description--big">
+               
+                                 <h3 class="quize-card__title quize-card__title--big"> Какой ваш идеальный интерьер?</h3>
+               
+                                 <p class="quize-card__text quize-card__text--big">Пройдите наш квиз и получите бесплатную консультацию
+               
+                                    дизайнера!
+               
+                                    Не упустите шанс превратить свое жилище в пространство, которое отражает вашу индивидуальность!</p>
+               
+                              </div>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-dizayn-intererov" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card quize-card--big health" data-category="health">
+               
+                           <img class="quize-card__img quize-card__img--big" src="/images/health-2.webp" alt="">
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <svg width="10" height="10" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                    <path
+               
+                                       d="M12 0C10.8133 0 9.65327 0.351894 8.66658 1.01118C7.67988 1.67047 6.91085 2.60754 6.45672 3.7039C6.0026 4.80026 5.88378 6.00666 6.11529 7.17054C6.3468 8.33443 6.91824 9.40353 7.75736 10.2426C8.59647 11.0818 9.66557 11.6532 10.8295 11.8847C11.9933 12.1162 13.1997 11.9974 14.2961 11.5433C15.3925 11.0892 16.3295 10.3201 16.9888 9.33342C17.6481 8.34673 18 7.18669 18 6C18 4.4087 17.3679 2.88258 16.2426 1.75736C15.1174 0.632141 13.5913 0 12 0ZM12 9C11.4067 9 10.8266 8.82405 10.3333 8.49441C9.83994 8.16476 9.45542 7.69623 9.22836 7.14805C9.0013 6.59987 8.94189 5.99667 9.05764 5.41473C9.1734 4.83279 9.45912 4.29824 9.87868 3.87868C10.2982 3.45912 10.8328 3.1734 11.4147 3.05764C11.9967 2.94189 12.5999 3.0013 13.1481 3.22836C13.6962 3.45542 14.1648 3.83994 14.4944 4.33329C14.8241 4.82664 15 5.40666 15 6C14.9992 6.7954 14.6828 7.55798 14.1204 8.12041C13.558 8.68284 12.7954 8.99917 12 9ZM16 16H8C5.87827 16 3.84344 16.8429 2.34315 18.3431C0.842855 19.8434 0 21.8783 0 24V30H24V24C24 21.8783 23.1571 19.8434 21.6569 18.3431C20.1566 16.8429 18.1217 16 16 16ZM21 27H3V24C3.00149 22.6744 3.52875 21.4035 4.46611 20.4661C5.40347 19.5288 6.67437 19.0015 8 19H16C17.3256 19.0015 18.5965 19.5288 19.5339 20.4661C20.4712 21.4035 20.9985 22.6744 21 24V27Z"
+               
+                                       fill="#444545" />
+               
+                                 </svg>
+               
+                              </span>
+               
+                              <span class="quize-card__text-head">Сбор контактов</span>
+               
+                              <span style="font-size: 12px; color: #444545; padding: 0 2px;">&#124;</span>
+               
+                              <span class="quize-card__text-head">Еда и здоровье</span>
+               
+                              <div class="quize-card__description quize-card__description--big">
+               
+                                 <h3 class="quize-card__title quize-card__title--big">Проверьте состояние вашей улыбки с помощью нашего
+               
+                                    квиза!</h3>
+               
+                                 <p class="quize-card__text quize-card__text--big">Результаты помогут понять, нужно ли вам обратиться к
+               
+                                    стоматологу для профессиональной консультации и лечения.</p>
+               
+                              </div>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-stomatolog-klinik" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card furniture" data-category="furniture">
+               
+                           <img class="quize-card__img" src="/images/furniture-3.webp" alt="">
+               
+                           <div class="quize-card__description">
+               
+                              <h3 class="quize-card__title">Не знаете, какой матрас выбрать?</h3>
+               
+                              <p class="quize-card__text">Мы вам поможем! Пройдите бесплатный квиз и узнайте, какой матрас обеспечит вам
+               
+                                 комфортный и здоровый сон. Всего 2 минуты — и вы найдете идеальный вариант.</p>
+               
+                           </div>
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <span class="quize-card__icon-head">
+               
+                                    <svg width="10" height="10" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                       <path
+               
+                                          d="M23.625 0H4.375C3.21508 0.00130272 2.10304 0.462657 1.28285 1.28285C0.462657 2.10304 0.00130272 3.21508 0 4.375L0 23.625C0.00130272 24.7849 0.462657 25.897 1.28285 26.7172C2.10304 27.5373 3.21508 27.9987 4.375 28H23.625C24.7849 27.9987 25.897 27.5373 26.7172 26.7172C27.5373 25.897 27.9987 24.7849 28 23.625V4.375C27.9987 3.21508 27.5373 2.10304 26.7172 1.28285C25.897 0.462657 24.7849 0.00130272 23.625 0ZM25.375 23.625C25.375 24.0891 25.1906 24.5342 24.8624 24.8624C24.5342 25.1906 24.0891 25.375 23.625 25.375H4.375C3.91087 25.375 3.46575 25.1906 3.13756 24.8624C2.80937 24.5342 2.625 24.0891 2.625 23.625V4.375C2.625 3.91087 2.80937 3.46575 3.13756 3.13756C3.46575 2.80937 3.91087 2.625 4.375 2.625H23.625C24.0891 2.625 24.5342 2.80937 24.8624 3.13756C25.1906 3.46575 25.375 3.91087 25.375 4.375V23.625ZM22.4104 8.22227C22.5324 8.3446 22.629 8.4898 22.6947 8.64955C22.7604 8.8093 22.794 8.98046 22.7934 9.1532C22.7929 9.32595 22.7582 9.49688 22.6914 9.6562C22.6247 9.81552 22.5271 9.9601 22.4044 10.0816L13.5997 18.8316C13.354 19.0765 13.0213 19.2141 12.6744 19.2145H12.6602C12.4863 19.2124 12.3146 19.1759 12.155 19.107C11.9954 19.0381 11.8511 18.9382 11.7305 18.813L7.38281 14.2953C7.26226 14.1714 7.16738 14.0249 7.10361 13.8642C7.03984 13.7035 7.00845 13.5318 7.01123 13.359C7.01401 13.1861 7.05091 13.0155 7.11981 12.857C7.18871 12.6984 7.28825 12.555 7.41273 12.4351C7.5372 12.3151 7.68414 12.2209 7.84513 12.1579C8.00611 12.0949 8.17795 12.0643 8.35079 12.0679C8.52363 12.0714 8.69406 12.1091 8.85229 12.1788C9.01051 12.2484 9.15343 12.3486 9.27281 12.4737L12.6968 16.0284L20.5543 8.2168C20.8012 7.9714 21.1354 7.83411 21.4835 7.83514C21.8316 7.83616 22.165 7.97542 22.4104 8.22227Z"
+               
+                                          fill="currentColor" />
+               
+                                    </svg>
+               
+                                 </span>
+               
+                                 <span class="quize-card__text-head">Тестирование</span>
+               
+                                 <span style="font-size: 12px; color: #444545;">&#124;</span>
+               
+                                 <span class="quize-card__text-head">Про мебель</span>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-matrsa" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card courses" data-category="courses">
+               
+                           <img class="quize-card__img" src="/images/courses-2.webp" alt="">
+               
+                           <div class="quize-card__description">
+               
+                              <h3 class="quize-card__title">Хотите прокачать свои навыки и открыть новые возможности?</h3>
+               
+                              <p class="quize-card__text">Пройдите бесплатный квиз и узнайте, какой онлайн-курс подойдет именно вам!</p>
+               
+                           </div>
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <span class="quize-card__icon-head">
+               
+                                    <svg width="10" height="10" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                       <path
+               
+                                          d="M23.625 0H4.375C3.21508 0.00130272 2.10304 0.462657 1.28285 1.28285C0.462657 2.10304 0.00130272 3.21508 0 4.375L0 23.625C0.00130272 24.7849 0.462657 25.897 1.28285 26.7172C2.10304 27.5373 3.21508 27.9987 4.375 28H23.625C24.7849 27.9987 25.897 27.5373 26.7172 26.7172C27.5373 25.897 27.9987 24.7849 28 23.625V4.375C27.9987 3.21508 27.5373 2.10304 26.7172 1.28285C25.897 0.462657 24.7849 0.00130272 23.625 0ZM25.375 23.625C25.375 24.0891 25.1906 24.5342 24.8624 24.8624C24.5342 25.1906 24.0891 25.375 23.625 25.375H4.375C3.91087 25.375 3.46575 25.1906 3.13756 24.8624C2.80937 24.5342 2.625 24.0891 2.625 23.625V4.375C2.625 3.91087 2.80937 3.46575 3.13756 3.13756C3.46575 2.80937 3.91087 2.625 4.375 2.625H23.625C24.0891 2.625 24.5342 2.80937 24.8624 3.13756C25.1906 3.46575 25.375 3.91087 25.375 4.375V23.625ZM22.4104 8.22227C22.5324 8.3446 22.629 8.4898 22.6947 8.64955C22.7604 8.8093 22.794 8.98046 22.7934 9.1532C22.7929 9.32595 22.7582 9.49688 22.6914 9.6562C22.6247 9.81552 22.5271 9.9601 22.4044 10.0816L13.5997 18.8316C13.354 19.0765 13.0213 19.2141 12.6744 19.2145H12.6602C12.4863 19.2124 12.3146 19.1759 12.155 19.107C11.9954 19.0381 11.8511 18.9382 11.7305 18.813L7.38281 14.2953C7.26226 14.1714 7.16738 14.0249 7.10361 13.8642C7.03984 13.7035 7.00845 13.5318 7.01123 13.359C7.01401 13.1861 7.05091 13.0155 7.11981 12.857C7.18871 12.6984 7.28825 12.555 7.41273 12.4351C7.5372 12.3151 7.68414 12.2209 7.84513 12.1579C8.00611 12.0949 8.17795 12.0643 8.35079 12.0679C8.52363 12.0714 8.69406 12.1091 8.85229 12.1788C9.01051 12.2484 9.15343 12.3486 9.27281 12.4737L12.6968 16.0284L20.5543 8.2168C20.8012 7.9714 21.1354 7.83411 21.4835 7.83514C21.8316 7.83616 22.165 7.97542 22.4104 8.22227Z"
+               
+                                          fill="currentColor" />
+               
+                                    </svg>
+               
+                                 </span>
+               
+                                 <span class="quize-card__text-head">Тестирование</span>
+               
+                                 <span style="font-size: 12px; color: #444545;">&#124;</span>
+               
+                                 <span class="quize-card__text-head">Подбор курсов</span>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-prokachay-svoy-skill" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card courses" data-category="courses">
+               
+                           <img class="quize-card__img" src="/images/courses-3.webp" alt="">
+               
+                           <div class="quize-card__description">
+               
+                              <h3 class="quize-card__title">Хотите зарабатывать онлайн, но не знаете с чего начать?</h3>
+               
+                              <p class="quize-card__text">Получите персональную рекомендацию по выбору онлайн-профессии! Мы поможем вам
+               
+                                 определить ваши сильные стороны, интересы и навыки.</p>
+               
+                           </div>
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <span class="quize-card__icon-head">
+               
+                                    <svg width="10" height="10" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                       <path
+               
+                                          d="M23.625 0H4.375C3.21508 0.00130272 2.10304 0.462657 1.28285 1.28285C0.462657 2.10304 0.00130272 3.21508 0 4.375L0 23.625C0.00130272 24.7849 0.462657 25.897 1.28285 26.7172C2.10304 27.5373 3.21508 27.9987 4.375 28H23.625C24.7849 27.9987 25.897 27.5373 26.7172 26.7172C27.5373 25.897 27.9987 24.7849 28 23.625V4.375C27.9987 3.21508 27.5373 2.10304 26.7172 1.28285C25.897 0.462657 24.7849 0.00130272 23.625 0ZM25.375 23.625C25.375 24.0891 25.1906 24.5342 24.8624 24.8624C24.5342 25.1906 24.0891 25.375 23.625 25.375H4.375C3.91087 25.375 3.46575 25.1906 3.13756 24.8624C2.80937 24.5342 2.625 24.0891 2.625 23.625V4.375C2.625 3.91087 2.80937 3.46575 3.13756 3.13756C3.46575 2.80937 3.91087 2.625 4.375 2.625H23.625C24.0891 2.625 24.5342 2.80937 24.8624 3.13756C25.1906 3.46575 25.375 3.91087 25.375 4.375V23.625ZM22.4104 8.22227C22.5324 8.3446 22.629 8.4898 22.6947 8.64955C22.7604 8.8093 22.794 8.98046 22.7934 9.1532C22.7929 9.32595 22.7582 9.49688 22.6914 9.6562C22.6247 9.81552 22.5271 9.9601 22.4044 10.0816L13.5997 18.8316C13.354 19.0765 13.0213 19.2141 12.6744 19.2145H12.6602C12.4863 19.2124 12.3146 19.1759 12.155 19.107C11.9954 19.0381 11.8511 18.9382 11.7305 18.813L7.38281 14.2953C7.26226 14.1714 7.16738 14.0249 7.10361 13.8642C7.03984 13.7035 7.00845 13.5318 7.01123 13.359C7.01401 13.1861 7.05091 13.0155 7.11981 12.857C7.18871 12.6984 7.28825 12.555 7.41273 12.4351C7.5372 12.3151 7.68414 12.2209 7.84513 12.1579C8.00611 12.0949 8.17795 12.0643 8.35079 12.0679C8.52363 12.0714 8.69406 12.1091 8.85229 12.1788C9.01051 12.2484 9.15343 12.3486 9.27281 12.4737L12.6968 16.0284L20.5543 8.2168C20.8012 7.9714 21.1354 7.83411 21.4835 7.83514C21.8316 7.83616 22.165 7.97542 22.4104 8.22227Z"
+               
+                                          fill="currentColor" />
+               
+                                    </svg>
+               
+                                 </span>
+               
+                                 <span class="quize-card__text-head">Тестирование</span>
+               
+                                 <span style="font-size: 12px; color: #444545;">&#124;</span>
+               
+                                 <span class="quize-card__text-head">Подбор курсов</span>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-onlayn-professiya" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card cars" data-category="cars">
+               
+                           <img class="quize-card__img" src="/images/cars-2.webp" alt="">
+               
+                           <div class="quize-card__description">
+               
+                              <h3 class="quize-card__title">Устали искать лучшую страховку для автомобиля?</h3>
+               
+                              <p class="quize-card__text">Пройдите наш квиз и получите предложения, точно
+               
+                                 соответствующие вашим требованиям и бюджету!</p>
+               
+                           </div>
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <svg width="10" height="10" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                    <path
+               
+                                       d="M23.625 0H4.375C3.21508 0.00130272 2.10304 0.462657 1.28285 1.28285C0.462657 2.10304 0.00130272 3.21508 0 4.375L0 23.625C0.00130272 24.7849 0.462657 25.897 1.28285 26.7172C2.10304 27.5373 3.21508 27.9987 4.375 28H23.625C24.7849 27.9987 25.897 27.5373 26.7172 26.7172C27.5373 25.897 27.9987 24.7849 28 23.625V4.375C27.9987 3.21508 27.5373 2.10304 26.7172 1.28285C25.897 0.462657 24.7849 0.00130272 23.625 0ZM25.375 23.625C25.375 24.0891 25.1906 24.5342 24.8624 24.8624C24.5342 25.1906 24.0891 25.375 23.625 25.375H4.375C3.91087 25.375 3.46575 25.1906 3.13756 24.8624C2.80937 24.5342 2.625 24.0891 2.625 23.625V4.375C2.625 3.91087 2.80937 3.46575 3.13756 3.13756C3.46575 2.80937 3.91087 2.625 4.375 2.625H23.625C24.0891 2.625 24.5342 2.80937 24.8624 3.13756C25.1906 3.46575 25.375 3.91087 25.375 4.375V23.625ZM22.4104 8.22227C22.5324 8.3446 22.629 8.4898 22.6947 8.64955C22.7604 8.8093 22.794 8.98046 22.7934 9.1532C22.7929 9.32595 22.7582 9.49688 22.6914 9.6562C22.6247 9.81552 22.5271 9.9601 22.4044 10.0816L13.5997 18.8316C13.354 19.0765 13.0213 19.2141 12.6744 19.2145H12.6602C12.4863 19.2124 12.3146 19.1759 12.155 19.107C11.9954 19.0381 11.8511 18.9382 11.7305 18.813L7.38281 14.2953C7.26226 14.1714 7.16738 14.0249 7.10361 13.8642C7.03984 13.7035 7.00845 13.5318 7.01123 13.359C7.01401 13.1861 7.05091 13.0155 7.11981 12.857C7.18871 12.6984 7.28825 12.555 7.41273 12.4351C7.5372 12.3151 7.68414 12.2209 7.84513 12.1579C8.00611 12.0949 8.17795 12.0643 8.35079 12.0679C8.52363 12.0714 8.69406 12.1091 8.85229 12.1788C9.01051 12.2484 9.15343 12.3486 9.27281 12.4737L12.6968 16.0284L20.5543 8.2168C20.8012 7.9714 21.1354 7.83411 21.4835 7.83514C21.8316 7.83616 22.165 7.97542 22.4104 8.22227Z"
+               
+                                       fill="currentColor" />
+               
+                                 </svg>
+               
+                              </span>
+               
+                              <span class="quize-card__text-head">Тестирование</span>
+               
+                              <span style="font-size: 12px; color: #444545; padding: 0 2px;">&#124;</span>
+               
+                              <span class="quize-card__text-head">Автоподбор</span>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-raschet-avtostrahovaniya" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card quize-card--big other" data-category="other">
+               
+                           <img class="quize-card__img quize-card__img--big" src="/images/other-3.webp" alt="">
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <svg width="10" height="10" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                    <path
+               
+                                       d="M26.5733 20.7004C27.1422 21.2701 27.1422 22.1873 26.5733 22.7474L21.7523 27.5752C21.4727 27.8552 21.0967 28 20.7303 28C20.3639 28 19.9879 27.8552 19.7082 27.5752C19.573 27.4413 19.4656 27.282 19.3923 27.1063C19.319 26.9306 19.2812 26.7421 19.2812 26.5517C19.2812 26.3613 19.319 26.1727 19.3923 25.997C19.4656 25.8214 19.573 25.662 19.7082 25.5282L22.0609 23.1722H17.3556C17.1724 23.1722 16.9892 23.1336 16.8253 23.066H16.806C16.6324 22.9888 16.4685 22.8825 16.3335 22.7474L9.04419 15.4477H1.4463C0.646014 15.4477 0 14.8008 0 13.9994C0 13.198 0.646014 12.5511 1.4463 12.5511H9.04419L16.3335 5.25144C16.4685 5.11626 16.6324 5.01005 16.806 4.93281H16.8253C16.9892 4.86522 17.1628 4.82659 17.3556 4.82659H22.0609L19.7082 2.47063C19.1394 1.90095 19.1394 0.983671 19.7082 0.423647C20.2771 -0.136377 21.1931 -0.146033 21.7523 0.423647L26.5733 5.25144C27.1422 5.82112 27.1422 6.7384 26.5733 7.29842L21.7523 12.1262C21.4727 12.4062 21.0967 12.5511 20.7303 12.5511C20.3639 12.5511 19.9879 12.4062 19.7082 12.1262C19.573 11.9924 19.4656 11.833 19.3923 11.6573C19.319 11.4816 19.2812 11.2931 19.2812 11.1027C19.2812 10.9123 19.319 10.7238 19.3923 10.5481C19.4656 10.3724 19.573 10.213 19.7082 10.0792L22.0609 7.72327H17.9534L11.6861 13.9994L17.9534 20.2755H22.0609L19.7082 17.9196C19.1394 17.3499 19.1394 16.4326 19.7082 15.8726C20.2771 15.3126 21.1931 15.3029 21.7523 15.8726L26.5733 20.7004Z"
+               
+                                       fill="currentColor" />
+               
+                                 </svg>
+               
+                              </span>
+               
+                              <span class="quize-card__text-head">Вариативный</span>
+               
+                              <span style="font-size: 12px; color: #444545; padding: 0 2px;">&#124;</span>
+               
+                              <span class="quize-card__text-head">Другие</span>
+               
+                              <div class="quize-card__description quize-card__description--big">
+               
+                                 <h3 class="quize-card__title quize-card__title--big">Пройдите квиз и получите скидку 10%</h3>
+               
+                                 <p class="quize-card__text quize-card__text--big">Хотите найти идеальное платье, подчеркивающее вашу
+               
+                                    фигуру? Пройдите наш квиз, который поможет вам раскрыть свой
+               
+                                    уникальный стиль и подобрать наряд, в котором вы будете чувствовать себя звездой!</p>
+               
+                              </div>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-platya" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card quize-card--big other" data-category="other">
+               
+                           <img class="quize-card__img quize-card__img--big" src="/images/other-4.webp" alt="">
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <svg width="10" height="10" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                    <path
+               
+                                       d="M26.5733 20.7004C27.1422 21.2701 27.1422 22.1873 26.5733 22.7474L21.7523 27.5752C21.4727 27.8552 21.0967 28 20.7303 28C20.3639 28 19.9879 27.8552 19.7082 27.5752C19.573 27.4413 19.4656 27.282 19.3923 27.1063C19.319 26.9306 19.2812 26.7421 19.2812 26.5517C19.2812 26.3613 19.319 26.1727 19.3923 25.997C19.4656 25.8214 19.573 25.662 19.7082 25.5282L22.0609 23.1722H17.3556C17.1724 23.1722 16.9892 23.1336 16.8253 23.066H16.806C16.6324 22.9888 16.4685 22.8825 16.3335 22.7474L9.04419 15.4477H1.4463C0.646014 15.4477 0 14.8008 0 13.9994C0 13.198 0.646014 12.5511 1.4463 12.5511H9.04419L16.3335 5.25144C16.4685 5.11626 16.6324 5.01005 16.806 4.93281H16.8253C16.9892 4.86522 17.1628 4.82659 17.3556 4.82659H22.0609L19.7082 2.47063C19.1394 1.90095 19.1394 0.983671 19.7082 0.423647C20.2771 -0.136377 21.1931 -0.146033 21.7523 0.423647L26.5733 5.25144C27.1422 5.82112 27.1422 6.7384 26.5733 7.29842L21.7523 12.1262C21.4727 12.4062 21.0967 12.5511 20.7303 12.5511C20.3639 12.5511 19.9879 12.4062 19.7082 12.1262C19.573 11.9924 19.4656 11.833 19.3923 11.6573C19.319 11.4816 19.2812 11.2931 19.2812 11.1027C19.2812 10.9123 19.319 10.7238 19.3923 10.5481C19.4656 10.3724 19.573 10.213 19.7082 10.0792L22.0609 7.72327H17.9534L11.6861 13.9994L17.9534 20.2755H22.0609L19.7082 17.9196C19.1394 17.3499 19.1394 16.4326 19.7082 15.8726C20.2771 15.3126 21.1931 15.3029 21.7523 15.8726L26.5733 20.7004Z"
+               
+                                       fill="currentColor" />
+               
+                                 </svg>
+               
+                              </span>
+               
+                              <span class="quize-card__text-head">Вариативный</span>
+               
+                              <span style="font-size: 12px; color: #444545; padding: 0 2px;">&#124;</span>
+               
+                              <span class="quize-card__text-head">Другие</span>
+               
+                              <div class="quize-card__description quize-card__description--big">
+               
+                                 <h3 class="quize-card__title quize-card__title--big">Как выбрать подарок для коллеги?</h3>
+               
+                                 <p class="quize-card__text quize-card__text--big">Результаты квиза помогут вам сделать правильный выбор
+               
+                                    подарка, который укрепит ваши отношения с коллегой и оставит приятное впечатление.</p>
+               
+                              </div>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-podarka" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card health" data-category="health">
+               
+                           <img class="quize-card__img" src="/images/health-3.webp" alt="">
+               
+                           <div class="quize-card__description">
+               
+                              <h3 class="quize-card__title">Определите лучшую для вас диету!</h3>
+               
+                              <p class="quize-card__text">Хотите узнать, какая диета лучше всего вам подойдет? Пройдите наш уникальный
+               
+                                 квиз прямо сейчас и получите рекомендации!</p>
+               
+                           </div>
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <svg width="10" height="10" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                    <path
+               
+                                       d="M12 0C10.8133 0 9.65327 0.351894 8.66658 1.01118C7.67988 1.67047 6.91085 2.60754 6.45672 3.7039C6.0026 4.80026 5.88378 6.00666 6.11529 7.17054C6.3468 8.33443 6.91824 9.40353 7.75736 10.2426C8.59647 11.0818 9.66557 11.6532 10.8295 11.8847C11.9933 12.1162 13.1997 11.9974 14.2961 11.5433C15.3925 11.0892 16.3295 10.3201 16.9888 9.33342C17.6481 8.34673 18 7.18669 18 6C18 4.4087 17.3679 2.88258 16.2426 1.75736C15.1174 0.632141 13.5913 0 12 0ZM12 9C11.4067 9 10.8266 8.82405 10.3333 8.49441C9.83994 8.16476 9.45542 7.69623 9.22836 7.14805C9.0013 6.59987 8.94189 5.99667 9.05764 5.41473C9.1734 4.83279 9.45912 4.29824 9.87868 3.87868C10.2982 3.45912 10.8328 3.1734 11.4147 3.05764C11.9967 2.94189 12.5999 3.0013 13.1481 3.22836C13.6962 3.45542 14.1648 3.83994 14.4944 4.33329C14.8241 4.82664 15 5.40666 15 6C14.9992 6.7954 14.6828 7.55798 14.1204 8.12041C13.558 8.68284 12.7954 8.99917 12 9ZM16 16H8C5.87827 16 3.84344 16.8429 2.34315 18.3431C0.842855 19.8434 0 21.8783 0 24V30H24V24C24 21.8783 23.1571 19.8434 21.6569 18.3431C20.1566 16.8429 18.1217 16 16 16ZM21 27H3V24C3.00149 22.6744 3.52875 21.4035 4.46611 20.4661C5.40347 19.5288 6.67437 19.0015 8 19H16C17.3256 19.0015 18.5965 19.5288 19.5339 20.4661C20.4712 21.4035 20.9985 22.6744 21 24V27Z"
+               
+                                       fill="#444545" />
+               
+                                 </svg>
+               
+                              </span>
+               
+                              <span class="quize-card__text-head">Сбор контактов</span>
+               
+                              <span style="font-size: 12px; color: #444545;">&#124;</span>
+               
+                              <span class="quize-card__text-head">Еда и здоровье</span>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-diety" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card realty" data-category="realty">
+               
+                           <img class="quize-card__img" src="/images/realty-2.webp" alt="">
+               
+                           <div class="quize-card__description">
+               
+                              <h3 class="quize-card__title">Узнайте цену ремонта своей квартиры</h3>
+               
+                              <p class="quize-card__text">Результаты этого квиза помогут вам начать ремонт квартиры с учётом ваших
+               
+                                 финансовых возможностей и предпочтений.</p>
+               
+                           </div>
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <svg width="10" height="10" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                    <path
+               
+                                       d="M23.625 0H4.375C3.21508 0.00130272 2.10304 0.462657 1.28285 1.28285C0.462657 2.10304 0.00130272 3.21508 0 4.375L0 23.625C0.00130272 24.7849 0.462657 25.897 1.28285 26.7172C2.10304 27.5373 3.21508 27.9987 4.375 28H23.625C24.7849 27.9987 25.897 27.5373 26.7172 26.7172C27.5373 25.897 27.9987 24.7849 28 23.625V4.375C27.9987 3.21508 27.5373 2.10304 26.7172 1.28285C25.897 0.462657 24.7849 0.00130272 23.625 0ZM25.375 23.625C25.375 24.0891 25.1906 24.5342 24.8624 24.8624C24.5342 25.1906 24.0891 25.375 23.625 25.375H4.375C3.91087 25.375 3.46575 25.1906 3.13756 24.8624C2.80937 24.5342 2.625 24.0891 2.625 23.625V4.375C2.625 3.91087 2.80937 3.46575 3.13756 3.13756C3.46575 2.80937 3.91087 2.625 4.375 2.625H23.625C24.0891 2.625 24.5342 2.80937 24.8624 3.13756C25.1906 3.46575 25.375 3.91087 25.375 4.375V23.625ZM22.4104 8.22227C22.5324 8.3446 22.629 8.4898 22.6947 8.64955C22.7604 8.8093 22.794 8.98046 22.7934 9.1532C22.7929 9.32595 22.7582 9.49688 22.6914 9.6562C22.6247 9.81552 22.5271 9.9601 22.4044 10.0816L13.5997 18.8316C13.354 19.0765 13.0213 19.2141 12.6744 19.2145H12.6602C12.4863 19.2124 12.3146 19.1759 12.155 19.107C11.9954 19.0381 11.8511 18.9382 11.7305 18.813L7.38281 14.2953C7.26226 14.1714 7.16738 14.0249 7.10361 13.8642C7.03984 13.7035 7.00845 13.5318 7.01123 13.359C7.01401 13.1861 7.05091 13.0155 7.11981 12.857C7.18871 12.6984 7.28825 12.555 7.41273 12.4351C7.5372 12.3151 7.68414 12.2209 7.84513 12.1579C8.00611 12.0949 8.17795 12.0643 8.35079 12.0679C8.52363 12.0714 8.69406 12.1091 8.85229 12.1788C9.01051 12.2484 9.15343 12.3486 9.27281 12.4737L12.6968 16.0284L20.5543 8.2168C20.8012 7.9714 21.1354 7.83411 21.4835 7.83514C21.8316 7.83616 22.165 7.97542 22.4104 8.22227Z"
+               
+                                       fill="currentColor" />
+               
+                                 </svg>
+               
+                              </span>
+               
+                              <span class="quize-card__text-head">Тестирование</span>
+               
+                              <span style="font-size: 12px; color: #444545;">&#124;</span>
+               
+                              <span class="quize-card__text-head">Недвижимость</span>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-remont-kvartiry" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card health" data-category="health">
+               
+                           <img class="quize-card__img" src="/images/health-4.webp" alt="">
+               
+                           <div class="quize-card__description">
+               
+                              <h3 class="quize-card__title">Найдите идеальный вид массажа!</h3>
+               
+                              <p class="quize-card__text">Пройдите наш квиз и найдите
+               
+                                 идеальный способ расслабиться и восстановиться!</p>
+               
+                           </div>
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <svg width="10" height="10" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                    <path
+               
+                                       d="M12 0C10.8133 0 9.65327 0.351894 8.66658 1.01118C7.67988 1.67047 6.91085 2.60754 6.45672 3.7039C6.0026 4.80026 5.88378 6.00666 6.11529 7.17054C6.3468 8.33443 6.91824 9.40353 7.75736 10.2426C8.59647 11.0818 9.66557 11.6532 10.8295 11.8847C11.9933 12.1162 13.1997 11.9974 14.2961 11.5433C15.3925 11.0892 16.3295 10.3201 16.9888 9.33342C17.6481 8.34673 18 7.18669 18 6C18 4.4087 17.3679 2.88258 16.2426 1.75736C15.1174 0.632141 13.5913 0 12 0ZM12 9C11.4067 9 10.8266 8.82405 10.3333 8.49441C9.83994 8.16476 9.45542 7.69623 9.22836 7.14805C9.0013 6.59987 8.94189 5.99667 9.05764 5.41473C9.1734 4.83279 9.45912 4.29824 9.87868 3.87868C10.2982 3.45912 10.8328 3.1734 11.4147 3.05764C11.9967 2.94189 12.5999 3.0013 13.1481 3.22836C13.6962 3.45542 14.1648 3.83994 14.4944 4.33329C14.8241 4.82664 15 5.40666 15 6C14.9992 6.7954 14.6828 7.55798 14.1204 8.12041C13.558 8.68284 12.7954 8.99917 12 9ZM16 16H8C5.87827 16 3.84344 16.8429 2.34315 18.3431C0.842855 19.8434 0 21.8783 0 24V30H24V24C24 21.8783 23.1571 19.8434 21.6569 18.3431C20.1566 16.8429 18.1217 16 16 16ZM21 27H3V24C3.00149 22.6744 3.52875 21.4035 4.46611 20.4661C5.40347 19.5288 6.67437 19.0015 8 19H16C17.3256 19.0015 18.5965 19.5288 19.5339 20.4661C20.4712 21.4035 20.9985 22.6744 21 24V27Z"
+               
+                                       fill="#444545" />
+               
+                                 </svg>
+               
+                              </span>
+               
+                              <span class="quize-card__text-head">Сбор контактов</span>
+               
+                              <span style="font-size: 12px; color: #444545;">&#124;</span>
+               
+                              <span class="quize-card__text-head">Еда и здоровье</span>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-vid-massazha" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card quize-card--big cars" data-category="cars">
+               
+                           <img class="quize-card__img quize-card__img--big" src="/images/cars-3.webp" alt="">
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <svg width="10" height="10" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                    <path
+               
+                                       d="M26.5733 20.7004C27.1422 21.2701 27.1422 22.1873 26.5733 22.7474L21.7523 27.5752C21.4727 27.8552 21.0967 28 20.7303 28C20.3639 28 19.9879 27.8552 19.7082 27.5752C19.573 27.4413 19.4656 27.282 19.3923 27.1063C19.319 26.9306 19.2812 26.7421 19.2812 26.5517C19.2812 26.3613 19.319 26.1727 19.3923 25.997C19.4656 25.8214 19.573 25.662 19.7082 25.5282L22.0609 23.1722H17.3556C17.1724 23.1722 16.9892 23.1336 16.8253 23.066H16.806C16.6324 22.9888 16.4685 22.8825 16.3335 22.7474L9.04419 15.4477H1.4463C0.646014 15.4477 0 14.8008 0 13.9994C0 13.198 0.646014 12.5511 1.4463 12.5511H9.04419L16.3335 5.25144C16.4685 5.11626 16.6324 5.01005 16.806 4.93281H16.8253C16.9892 4.86522 17.1628 4.82659 17.3556 4.82659H22.0609L19.7082 2.47063C19.1394 1.90095 19.1394 0.983671 19.7082 0.423647C20.2771 -0.136377 21.1931 -0.146033 21.7523 0.423647L26.5733 5.25144C27.1422 5.82112 27.1422 6.7384 26.5733 7.29842L21.7523 12.1262C21.4727 12.4062 21.0967 12.5511 20.7303 12.5511C20.3639 12.5511 19.9879 12.4062 19.7082 12.1262C19.573 11.9924 19.4656 11.833 19.3923 11.6573C19.319 11.4816 19.2812 11.2931 19.2812 11.1027C19.2812 10.9123 19.319 10.7238 19.3923 10.5481C19.4656 10.3724 19.573 10.213 19.7082 10.0792L22.0609 7.72327H17.9534L11.6861 13.9994L17.9534 20.2755H22.0609L19.7082 17.9196C19.1394 17.3499 19.1394 16.4326 19.7082 15.8726C20.2771 15.3126 21.1931 15.3029 21.7523 15.8726L26.5733 20.7004Z"
+               
+                                       fill="currentColor" />
+               
+                                 </svg>
+               
+                              </span>
+               
+                              <span class="quize-card__text-head">Вариативный</span>
+               
+                              <span style="font-size: 12px; color: #444545; padding: 0 2px;">&#124;</span>
+               
+                              <span class="quize-card__text-head">Автоподбор</span>
+               
+                              <div class="quize-card__description quize-card__description--big">
+               
+                                 <h3 class="quize-card__title quize-card__title--big">Расчёт стоимости грузоперевозок – легко!</h3>
+               
+                                 <p class="quize-card__text quize-card__text--big">Хотите узнать, сколько будет стоить доставка вашего
+               
+                                    груза?
+               
+                                    Пройдите наш короткий квиз и получите мгновенный расчет стоимости грузоперевозки!</p>
+               
+                              </div>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-stoimost-gruzoperevozok" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                        <li class="quize-card other" data-category="other">
+               
+                           <img class="quize-card__img" src="/images/other-5.webp" alt="">
+               
+                           <div class="quize-card__description">
+               
+                              <h3 class="quize-card__title">Узнайте стоимость ландшафтного дизайна вашего сада</h3>
+               
+                              <p class="quize-card__text">Результаты квиза помогут вам начать процесс преображения садового участка,
+               
+                                 учитывая ваши предпочтения и финансовые возможности.</p>
+               
+                           </div>
+               
+                           <div>
+               
+                              <span class="quize-card__icon-head">
+               
+                                 <span class="quize-card__icon-head">
+               
+                                    <svg width="10" height="10" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+               
+                                       <path
+               
+                                          d="M23.625 0H4.375C3.21508 0.00130272 2.10304 0.462657 1.28285 1.28285C0.462657 2.10304 0.00130272 3.21508 0 4.375L0 23.625C0.00130272 24.7849 0.462657 25.897 1.28285 26.7172C2.10304 27.5373 3.21508 27.9987 4.375 28H23.625C24.7849 27.9987 25.897 27.5373 26.7172 26.7172C27.5373 25.897 27.9987 24.7849 28 23.625V4.375C27.9987 3.21508 27.5373 2.10304 26.7172 1.28285C25.897 0.462657 24.7849 0.00130272 23.625 0ZM25.375 23.625C25.375 24.0891 25.1906 24.5342 24.8624 24.8624C24.5342 25.1906 24.0891 25.375 23.625 25.375H4.375C3.91087 25.375 3.46575 25.1906 3.13756 24.8624C2.80937 24.5342 2.625 24.0891 2.625 23.625V4.375C2.625 3.91087 2.80937 3.46575 3.13756 3.13756C3.46575 2.80937 3.91087 2.625 4.375 2.625H23.625C24.0891 2.625 24.5342 2.80937 24.8624 3.13756C25.1906 3.46575 25.375 3.91087 25.375 4.375V23.625ZM22.4104 8.22227C22.5324 8.3446 22.629 8.4898 22.6947 8.64955C22.7604 8.8093 22.794 8.98046 22.7934 9.1532C22.7929 9.32595 22.7582 9.49688 22.6914 9.6562C22.6247 9.81552 22.5271 9.9601 22.4044 10.0816L13.5997 18.8316C13.354 19.0765 13.0213 19.2141 12.6744 19.2145H12.6602C12.4863 19.2124 12.3146 19.1759 12.155 19.107C11.9954 19.0381 11.8511 18.9382 11.7305 18.813L7.38281 14.2953C7.26226 14.1714 7.16738 14.0249 7.10361 13.8642C7.03984 13.7035 7.00845 13.5318 7.01123 13.359C7.01401 13.1861 7.05091 13.0155 7.11981 12.857C7.18871 12.6984 7.28825 12.555 7.41273 12.4351C7.5372 12.3151 7.68414 12.2209 7.84513 12.1579C8.00611 12.0949 8.17795 12.0643 8.35079 12.0679C8.52363 12.0714 8.69406 12.1091 8.85229 12.1788C9.01051 12.2484 9.15343 12.3486 9.27281 12.4737L12.6968 16.0284L20.5543 8.2168C20.8012 7.9714 21.1354 7.83411 21.4835 7.83514C21.8316 7.83616 22.165 7.97542 22.4104 8.22227Z"
+               
+                                          fill="currentColor" />
+               
+                                    </svg>
+               
+                                 </span>
+               
+                                 <span class="quize-card__text-head">Тестирование</span>
+               
+                                 <span style="font-size: 12px; color: #444545;">&#124;</span>
+               
+                                 <span class="quize-card__text-head">Другие</span>
+               
+                           </div>
+               
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-landshaftnyi-dizain" target="_blank"></a>
+               
+                        </li>
+               
+                  
+               
+                     </ul>
                
                      <button class="section-quize-cards__load-more">Показать еще</button>
                
@@ -1328,7 +2061,7 @@
                      <ul class="section-integr__list">
                         <li class="section-integr__list-item crm">
                            <h3 class="crm__title">
-                              <span class="crm__card-number">1</span>
+                              <span class="card-number crm__card-number">1</span>
                               CRM
                            </h3>
                            <ul class="section-integr__list crm__list">
@@ -1338,19 +2071,19 @@
                            </ul>
                         </li>
                         <li class="section-integr__list-item integr-item item2">
-                           <span class="section-integr__card-number">2</span>
+                           <span class="card-number section-integr__card-number">2</span>
                            <p>Отправка на указанный вебхук (url адрес)</p>
                         </li>
                         <li class="section-integr__list-item integr-item item3">
-                           <span class="section-integr__card-number">3</span>
+                           <span class="card-number section-integr__card-number">3</span>
                            <p>Ручная выгрузка в .csv файл</p>
                         </li>
                         <li class="section-integr__list-item integr-item item4">
-                           <span class="section-integr__card-number">4</span>
+                           <span class="card-number section-integr__card-number">4</span>
                            <p>С помощью rest api</p>
                         </li>
                         <li class="section-integr__list-item integr-item item5">
-                           <span class="section-integr__card-number">5</span>
+                           <span class="card-number section-integr__card-number">5</span>
                            <p>Автоматическая отправка на указанные email адреса</p>
                         </li>
                         <li class="section-integr__list-item integr-item integr-item--btn-buy">
@@ -1396,8 +2129,16 @@
                         <!-- </div> -->
                         <div>
                            <h2 class="section-qa__title title">Вопросы & Ответы</h2>
-                           <p class="categiries__subtitle subtitle">Если вы не смогли найти ответ на интересующий вас вопрос о работе
-                              плагина, то мы срадость ответим вам здесь?
+                           <p class="section-qa__subtitle subtitle">Если вы не смогли найти ответ на интересующий вас вопрос о работе
+                              плагина, то создайте заявку и мы с радость ответим вам.
+                              <a href="https://support.wpshop.ru/ticket-form/" target="_blank">
+                                 Задать вопрос
+                                 <svg width="26" height="26" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M6.64645 12.6464C6.45118 12.8417 6.45118 13.1583 6.64645 13.3536C6.84171 13.5488 7.15829 13.5488 7.35355 13.3536L6.64645 12.6464ZM13.5 7C13.5 6.72386 13.2761 6.5 13 6.5L8.5 6.5C8.22386 6.5 8 6.72386 8 7C8 7.27614 8.22386 7.5 8.5 7.5H12.5V11.5C12.5 11.7761 12.7239 12 13 12C13.2761 12 13.5 11.7761 13.5 11.5L13.5 7ZM7.35355 13.3536L13.3536 7.35355L12.6464 6.64645L6.64645 12.6464L7.35355 13.3536Z"
+                                       fill="#8264fc" />
+                                 </svg>
+                              </a>
                            </p>
                         </div>
                      </div>
@@ -1409,7 +2150,9 @@
                               </h3>
                               <div class="section-qa__item-text-wrapper js-content-accordeon" aria-hidden="true">
                                  <p class="section-qa__item-text">
-                                    Да, плагин Quizle работает только на системе управления WordPress. Если не знаете, что
+                                    Да, плагин Quizle работает только на системе управления WordPress. 
+                                    <br><br>
+                                    Если не знаете, что
                                     это такое, у нас есть бесплатный курс по созданию сайта.
                                  </p>
                               </div>
@@ -1425,6 +2168,23 @@
                                  </p>
                               </div>
                            </li>
+                           <li class="section-qa__item section-qa__item--columns js-accordeon ">
+                              <h3 class="section-qa__item-title js-tab-accordeon" aria-expanded="false">
+                                 Что значит неограниченная лицензия?
+                              </h3>
+                              <div class="section-qa__item-text-wrapper js-content-accordeon" aria-hidden="true">
+                                 <p class="section-qa__item-text">
+                                    Неограниченную лицензию вы можете установить на любое количество своих доменов. Да, можно и на 100
+                                    сайтов поставить.
+                                    <br><br>
+                                    <span class="section-qa__item-text--bold">
+                                       Единственное и важное ограничение — только свои домены, все типы лицензий
+                                       приобретаются только для личного использования и передавать их запрещено. Это не лицензия для
+                                       клиентов и разработчиков.
+                                    </span>
+                                 </p>
+                              </div>
+                           </li>
                         </ul>
                         <ul class="section-qa__column">
                            <li class="section-qa__item section-qa__item--columns js-accordeon">
@@ -1434,7 +2194,6 @@
                               <div class="section-qa__item-text-wrapper js-content-accordeon" aria-hidden="true">
                                  <p class="section-qa__item-text">
                                     Да, плагин работает абсолютно на любом шаблоне.
-                                    Даже если что-то пойдет не так — мы всегда поможем и исправим.
                                     <br><br>
                                     <span class="section-qa__item-text--bold">
                                        Даже если что-то пойдет не так — мы всегда поможем и исправим.
@@ -1448,9 +2207,29 @@
                               </h3>
                               <div class="section-qa__item-text-wrapper js-content-accordeon" aria-hidden="true">
                                  <p class="section-qa__item-text">
-                                    Нет, это не обязательно. Обновления плагина для вас остаются бесплатными навсегда.
+                                    <span class="section-qa__item-text--bold">
+                                       Нет, это не обязательно.
+                                    </span>
+                                    <br><br>
+                                    Обновления плагина для вас остаются бесплатными навсегда.
                                     Техническая поддержка через тикеты выдается на 1 год с момента покупки лицензии, дальше
                                     ее можно при необходимости продлить.
+                                 </p>
+                              </div>
+                           </li>
+                           <li class="section-qa__item section-qa__item--columns js-accordeon">
+                              <h3 class="section-qa__item-title js-tab-accordeon" aria-expanded="false">
+                                 Какие ежемесячные или ежегодные платежи за плагин?
+                              </h3>
+                              <div class="section-qa__item-text-wrapper js-content-accordeon" aria-hidden="true">
+                                 <p class="section-qa__item-text">
+                                    У нас нет ежемесячных или ежегодных платежей. Вы можете один раз купить плагин и пользоваться им
+                                    всю жизнь, без лимита за заявки.
+                                    <br><br>
+                                    <span class="section-qa__item-text--bold">
+                                       Единственный платеж, который может быть — это за техническую
+                                       поддержку, она предоставляется на 1 год, дальше можно продлить, но это не обязательно.
+                                    </span>
                                  </p>
                               </div>
                            </li>
@@ -1625,7 +2404,7 @@
 
 
 
-                  <a href="https://wpshop.ru/">
+                  <a href="https://wpshop.ru/" target="_blank">
 
 
 
@@ -1633,7 +2412,11 @@
 
 
 
-                        <path d="M0 0H22.5L33.75 17L45 0L56.25 17L45 34H22.5M90 0H67.5L56.25 17L67.5 34" fill="currentColor"></path>
+                        <path d="M0 0H22.5L33.75 17L45 0L56.25 17L45 34H22.5M90 0H67.5L56.25 17L67.5 34" fill="currentColor">
+
+
+
+                        </path>
 
 
 
@@ -1673,15 +2456,23 @@
 
 
 
-            <nav class="site-footer__menu">
+      
 
 
 
-               <div>
+            <!-- <nav class="site-footer__menu"> -->
 
 
 
-                  <h5 class="site-footer__menu-title">Информация</h5>
+            <div class="site-footer__menu-info">
+
+
+
+               <h5 class="site-footer__menu-title">Информация</h5>
+
+
+
+               <div class="site-footer__menu-lists">
 
 
 
@@ -1725,6 +2516,18 @@
 
 
 
+      
+
+
+
+                  </ul>
+
+
+
+                  <ul class="site-footer__menu-list">
+
+
+
                      <li class="site-footer__menu-item">
 
 
@@ -1746,6 +2549,14 @@
 
 
                      </li>
+
+
+
+                  </ul>
+
+
+
+                  <ul class="site-footer__menu-list">
 
 
 
@@ -1781,11 +2592,19 @@
 
 
 
-               <div>
+            </div>
 
 
 
-                  <h5 class="site-footer__menu-title">Плагины WPShop</h5>
+            <div class="site-footer__menu-plugin">
+
+
+
+               <h5 class="site-footer__menu-title">Плагины WPShop</h5>
+
+
+
+               <div class="site-footer__menu-lists">
 
 
 
@@ -1793,7 +2612,11 @@
 
 
 
-                     <li class="site-footer__menu-item"><a href="https://wpshop.ru/plugins/abc-pagination">ABC Pagination</a>
+                     <li class="site-footer__menu-item"><a href="https://wpshop.ru/plugins/abc-pagination">ABC
+
+
+
+                           Pagination</a>
 
 
 
@@ -1813,11 +2636,27 @@
 
 
 
+                  </ul>
+
+
+
+                  <ul class="site-footer__menu-list">
+
+
+
                      <li class="site-footer__menu-item"><a href="https://wpshop.ru/plugins/my-popup">My Popup</a></li>
 
 
 
                      <li class="site-footer__menu-item"><a href="https://wpshop.ru/plugins/wpstories">WPStories</a></li>
+
+
+
+                  </ul>
+
+
+
+                  <ul class="site-footer__menu-list">
 
 
 
@@ -1837,7 +2676,11 @@
 
 
 
-            </nav>
+            </div>
+
+
+
+            <!-- </nav> -->
 
 
 
@@ -1889,7 +2732,7 @@
 
 
 
-      
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
 

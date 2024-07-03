@@ -74,13 +74,13 @@
    }
 
    &__icon-head {
-      color: var(--quizle-base-dark-color);
+      color: var(--quizle-text-color);
    }
 
    &__text-head {
       margin: 0;
       font-size: 12px;
-      color: var(--quizle-base-dark-color);
+      color: var(--quizle-text-color);
       text-align: center;
       padding: 4px 0 4px;
       vertical-align: bottom;
@@ -103,10 +103,10 @@
       margin-bottom: 4px;
       line-height: 1.1;
       font-weight: 800;
-      color: var(--quizle-base-dark-color);
+      color: var(--quizle-text-color);
 
       &--big {
-         color: var(--quizle-base-dark-color);
+         color: var(--quizle-text-color);
       }
    }
 

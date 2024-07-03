@@ -61,7 +61,7 @@
          display: inline-block;
          margin-top: 6px;
          background-color: #fff;
-         color: var(--quizle-accent-pink-color);
+         color: var(--quizle-primary-color);
          line-height: 1;
          padding: 20px 40px;
          border-radius: 50px;
@@ -74,6 +74,12 @@
       padding: 35px;
       background-color: var(--quizle-accent-transparent-color);
       border-radius: 12px;
+      transition: 0.3s;
+
+      @include hover {
+         opacity: 0.9;
+         scale: 1.03;
+       }
 
       &--first {
          grid-area: text1;
@@ -164,7 +170,7 @@
    }
 
    &__decor-4 {
-      left: 700px;
+      left: 50%;
       bottom: 450px;
 
       @include desktop-bottom {
@@ -173,7 +179,7 @@
       }
 
       @include tablet {
-         left: 60%;
+         left: 64%;
          bottom: 83%;
       }
    }

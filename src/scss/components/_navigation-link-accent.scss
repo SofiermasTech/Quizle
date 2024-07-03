@@ -10,11 +10,15 @@
       border-radius: 20px;
    }
 
-   &:hover {
+   @include hover {
       background-color: var(--quizle-primary-color);
 
-      &:hover a {
-         color: var(--quizle-primary-color-text);
+      a {
+         color: var(--quizle-text-color);
+      }
+
+      svg {
+         rotate: 45deg;
       }
    }
 
@@ -22,16 +26,15 @@
       @include fluid-text(16, 12);
       display: inline;
       padding: 10px 25px;
-      color: var(--quizle-base-dark-color);
+      color: var(--quizle-text-color);
       font-weight: 700;
-      text-decoration: none;
 
       @include mobile {
-         padding: 8px 10px;
+         padding: 6px 9px 6px 15px;
       }
    }
 
-   & svg {
+   svg {
       width: 26px;
       height: 26px;
       margin-left: 10px;

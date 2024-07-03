@@ -37,9 +37,10 @@
             </div>
          </div>
          <div class="site-footer__logo-wpshop">
-            <a href="https://wpshop.ru/">
+            <a href="https://wpshop.ru/" target="_blank">
                <svg width="60" height="40" viewBox="0 0 90 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0 0H22.5L33.75 17L45 0L56.25 17L45 34H22.5M90 0H67.5L56.25 17L67.5 34" fill="currentColor"></path>
+                  <path d="M0 0H22.5L33.75 17L45 0L56.25 17L45 34H22.5M90 0H67.5L56.25 17L67.5 34" fill="currentColor">
+                  </path>
                </svg>
                <!-- <span>© 2016—2024 WPShop&nbsp;®</span> -->
                <div class=" site-footer__logo-wpshop-content logo__content">
@@ -49,9 +50,11 @@
             </a>
          </div>
       </div>
-      <nav class="site-footer__menu">
-         <div>
-            <h5 class="site-footer__menu-title">Информация</h5>
+
+      <!-- <nav class="site-footer__menu"> -->
+      <div class="site-footer__menu-info">
+         <h5 class="site-footer__menu-title">Информация</h5>
+         <div class="site-footer__menu-lists">
             <ul class="site-footer__menu-list">
                <li class="site-footer__menu-item">
                   <a href="https://wpshop.ru/about">О компании WPShop</a>
@@ -62,12 +65,17 @@
                <li class="site-footer__menu-item">
                   <a href="https://wpshop.ru/support">Поддержка</a>
                </li>
+
+            </ul>
+            <ul class="site-footer__menu-list">
                <li class="site-footer__menu-item">
                   <a href="https://wpshop.ru/partner">Партнерская программа</a>
                </li>
                <li class="site-footer__menu-item">
                   <a href="https://wpshop.ru/oplata">Оплата и возврат</a>
                </li>
+            </ul>
+            <ul class="site-footer__menu-list">
                <li class="site-footer__menu-item">
                   <a href="https://wpshop.ru/reviews">Отзывы</a>
                </li>
@@ -76,21 +84,29 @@
                </li>
             </ul>
          </div>
-         <div>
-            <h5 class="site-footer__menu-title">Плагины WPShop</h5>
+      </div>
+      <div class="site-footer__menu-plugin">
+         <h5 class="site-footer__menu-title">Плагины WPShop</h5>
+         <div class="site-footer__menu-lists">
             <ul class="site-footer__menu-list">
-               <li class="site-footer__menu-item"><a href="https://wpshop.ru/plugins/abc-pagination">ABC Pagination</a>
+               <li class="site-footer__menu-item"><a href="https://wpshop.ru/plugins/abc-pagination">ABC
+                     Pagination</a>
                </li>
                <li class="site-footer__menu-item"><a href="https://wpshop.ru/plugins/expert-review">Expert Review</a>
                </li>
                <li class="site-footer__menu-item"><a href="https://wpshop.ru/plugins/clearfy">Clearfy</a></li>
+            </ul>
+            <ul class="site-footer__menu-list">
                <li class="site-footer__menu-item"><a href="https://wpshop.ru/plugins/my-popup">My Popup</a></li>
                <li class="site-footer__menu-item"><a href="https://wpshop.ru/plugins/wpstories">WPStories</a></li>
+            </ul>
+            <ul class="site-footer__menu-list">
                <li class="site-footer__menu-item"><a href="https://wpshop.ru/plugins/wpremark">WPRemark</a></li>
                <li class="site-footer__menu-item"><a href="https://wpshop.ru/plugins/quizle">Quizle</a></li>
             </ul>
          </div>
-      </nav>
+      </div>
+      <!-- </nav> -->
 
 
    </div>
@@ -103,7 +119,7 @@
 </div><!-- #page -->
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/main.min.js"></script>
 <script type="text/javascript" src="https://quizle.ru/wp-content/themes/reboot/assets/js/scripts.min.js?ver=1.5.2"
    id="reboot-scripts-js"></script>

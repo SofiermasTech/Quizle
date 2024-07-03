@@ -1,0 +1,54 @@
+.sticker {
+   width: 145px;
+   height: 140px;
+   border-radius: 8px;
+   background-color: var(--quizle-accent-green-color);
+   position: relative;
+   user-select: none;
+   animation: scale-btn-play-quizle 2s linear infinite alternate;
+
+   @include tablet-bottom {
+      width: 125px;
+      height: 120px;
+   }
+
+   &:before,
+   &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 140px;
+      height: 140px;
+      background: inherit;
+      border-radius: 8px;
+
+      @include tablet-bottom {
+         width: 125px;
+         height: 120px;
+      }
+   }
+
+   &:before {
+      transform: rotate(30deg);
+      animation: rotate-elm 13s linear infinite alternate;
+   }
+
+   &:after {
+      transform: rotate(60deg);
+      animation: rotate-elm 13s linear infinite alternate-reverse;
+
+   }
+}
+
+@keyframes rotate-elm {
+   100% {
+      transform: rotate(359deg);
+   }
+}
+
+@keyframes rotate-elm2 {
+   100% {
+      transform: rotate(359deg);
+   }
+}

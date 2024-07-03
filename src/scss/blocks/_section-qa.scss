@@ -1,6 +1,41 @@
 .section-qa {
    padding-block: var(--section-padding-y);
 
+& .circle-decor {
+   @include mobile {
+      rotate: 21deg;
+   }
+}
+
+   &__subtitle {
+      line-height: 1.6;
+
+      a {
+         padding: 5px 10px 7px 20px;
+         font-size: 14px;
+         border: 1px solid var(--quizle-text-color);
+         border-radius: 30px;
+
+         @include hover {
+            background-color: var(--quizle-accent-pink-light-color);
+            color: var(--quizle-text-color);
+            border: none;
+            font-weight: 700;
+
+            svg {
+               rotate: 45deg;
+               color: inherit;
+            }
+         }
+
+         @include tablet {
+            display: block;
+            margin-top: 10px;
+            width: 161px;
+         }
+      }
+   }
+
    &__inner {
       margin: 0 auto;
    }
@@ -129,7 +164,7 @@
       @include fluid-text(24, 20);
       margin: 0;
       font-weight: 800;
-      color: var(--quizle-base-dark-color);
+      color: var(--quizle-text-color);
       -webkit-transition: margin .2s;
       transition: margin .2s;
    }
