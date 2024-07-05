@@ -218,7 +218,7 @@
 
                         d="M6.80002 3.57002C6.80002 5.4478 5.27778 6.97003 3.40001 6.97003L1.53 6.97003C0.685004 6.97003 -3.34612e-07 7.65504 -3.71548e-07 8.50003V8.50003C-4.08485e-07 9.34503 0.685004 10.03 1.53 10.03L3.40001 10.03C5.27778 10.03 6.80002 11.5523 6.80002 13.43L6.80002 15.47C6.80002 16.315 7.48502 17 8.33002 17V17C9.17501 17 9.86002 16.315 9.86002 15.47L9.86002 13.515C9.86002 11.5903 11.4203 10.03 13.345 10.03L15.47 10.03C16.315 10.03 17 9.34503 17 8.50003V8.50003C17 7.65504 16.315 6.97003 15.47 6.97003L13.345 6.97003C11.4203 6.97003 9.86002 5.40974 9.86002 3.48502L9.86002 1.53C9.86002 0.685004 9.17501 -3.42041e-07 8.33002 -3.78977e-07V-3.78977e-07C7.48502 -4.15913e-07 6.80002 0.685004 6.80002 1.53L6.80002 3.57002Z"
 
-                        fill="#FFCBFF" />
+                        fill="#fb2dc9" fill-opacity=".8" />
 
                   </svg>
 
@@ -230,7 +230,7 @@
 
                         d="M9.20002 4.83003C9.20002 7.37054 7.14052 9.43004 4.60001 9.43004L2.07 9.43004C0.92677 9.43004 -4.5271e-07 10.3568 -5.02683e-07 11.5V11.5C-5.52655e-07 12.6433 0.926771 13.57 2.07 13.57L4.60001 13.57C7.14052 13.57 9.20002 15.6295 9.20002 18.17L9.20002 20.93C9.20002 22.0732 10.1268 23 11.27 23V23C12.4132 23 13.34 22.0732 13.34 20.93L13.34 18.285C13.34 15.681 15.451 13.57 18.055 13.57L20.93 13.57C22.0732 13.57 23 12.6433 23 11.5V11.5C23 10.3568 22.0732 9.43004 20.93 9.43004L18.055 9.43004C15.451 9.43004 13.34 7.31905 13.34 4.71502L13.34 2.07C13.34 0.92677 12.4132 -4.62762e-07 11.27 -5.12734e-07V-5.12734e-07C10.1268 -5.62706e-07 9.20002 0.926772 9.20002 2.07L9.20002 4.83003Z"
 
-                        fill="#FFCBFF" />
+                        fill="#fb2dc9" fill-opacity=".8"/>
 
                   </svg>
 
@@ -260,7 +260,7 @@
 
                   <svg class="intro__decor-5" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none">
 
-                     <path fill="#9B81FF" fill-opacity=".6" fill-rule="evenodd"
+                     <path fill="#8264FC" fill-opacity=".9" fill-rule="evenodd"
 
                         d="M8.8 4.62a4.4 4.4 0 0 1-4.4 4.4H1.98a1.98 1.98 0 0 0 0 3.96H4.4a4.4 4.4 0 0 1 4.4 4.4v2.64a1.98 1.98 0 0 0 3.96 0v-2.53a4.51 4.51 0 0 1 4.51-4.51h2.75a1.98 1.98 0 0 0 0-3.96h-2.75a4.51 4.51 0 0 1-4.51-4.51V1.98a1.98 1.98 0 0 0-3.96 0v2.64Z"
 
@@ -783,18 +783,18 @@
                
                   <form class="categiries__filters-list" name="filters">
                      <div class="categiries__filters-list-container" role="tablist">
-                        <div class="categiries__filter-item filter-item all-categories js-filter-item active" role="tab" aria-selected="false"
-                           data-id="all">
+                        <div class="categiries__filter-item filter-item all-categories js-filter-item active" role="tab"
+                           aria-selected="true" data-id="all">
                            <label for="all" class="filter-item__label"><span>Все категории</span></label>
                            <input id="all" class="filter-item__input visually-hidden" type="checkbox" name="category"
                               value="Все категории">
-                           
+               
                         </div>
                
-                        
                
-                        <div class="categiries__filter-item filter-item js-filter-item" role="tab" aria-selected="true"
-                           data-id="furniture">
+               
+                        <div class="categiries__filter-item filter-item js-filter-item" data-id="furniture" role="tab"
+                           aria-selected="false">
                            <label for="furniture" class="filter-item__label"><span>Расчет стоимости мебели</span></label>
                            <input id="furniture" class="filter-item__input visually-hidden" type="checkbox" name="category"
                               value="Расчет стоимости мебели">
@@ -811,7 +811,8 @@
                            </button>
                         </div>
                
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="kitchen">
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="kitchen"
+                           role="tab">
                            <label for="kitchen" class="filter-item__label"><span>Кухни на заказ</span></label>
                            <input id="kitchen" class="filter-item__input visually-hidden" type="checkbox" name="category"
                               value="Кухни на заказ">
@@ -828,7 +829,8 @@
                            </button>
                         </div>
                
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="health">
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="health"
+                           role="tab">
                            <label for="health" class="filter-item__label"><span>Питание и здоровье</span></label>
                            <input id="health" class="filter-item__input visually-hidden" type="checkbox" name="category"
                               value="Питание и здоровье">
@@ -845,7 +847,8 @@
                            </button>
                         </div>
                
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="tours">
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="tours"
+                           role="tab">
                            <label for="tours" class="filter-item__label"><span>Подбор туров для турагентств</span></label>
                            <input id="tours" class="filter-item__input visually-hidden" type="checkbox" name="category"
                               value="Подбор туров для турагентств">
@@ -862,7 +865,8 @@
                            </button>
                         </div>
                
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="realty">
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="realty"
+                           role="tab">
                            <label for="realty" class="filter-item__label"><span>Квизы по недвижимости</span></label>
                            <input id="realty" class="filter-item__input visually-hidden" type="checkbox" name="category"
                               value="Квизы по недвижимости">
@@ -879,7 +883,8 @@
                            </button>
                         </div>
                
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="courses">
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="courses"
+                           role="tab">
                            <label for="courses" class="filter-item__label"><span>Подбор подходящих курсов</span></label>
                            <input id="courses" class="filter-item__input visually-hidden" type="checkbox" name="category"
                               value="Подбор подходящих курсов">
@@ -896,7 +901,8 @@
                            </button>
                         </div>
                
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="cars">
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="cars"
+                           role="tab">
                            <label for="cars" class="filter-item__label"><span>Автоподбор</span></label>
                            <input id="cars" class="filter-item__input visually-hidden" type="checkbox" name="category"
                               value="Автоподбор">
@@ -913,7 +919,8 @@
                            </button>
                         </div>
                
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="interior">
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="interior"
+                           role="tab">
                            <label for="interior" class="filter-item__label"><span>Дизайн интерьеров</span></label>
                            <input id="interior" class="filter-item__input visually-hidden" type="checkbox" name="category"
                               value="Дизайн интерьеров">
@@ -930,7 +937,8 @@
                            </button>
                         </div>
                
-                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="other">
+                        <div class="categiries__filter-item filter-item js-filter-item" aria-selected="false" data-id="other"
+                           role="tab">
                            <label for="other" class="filter-item__label"><span>Другие</span></label>
                            <input id="other" class="filter-item__input visually-hidden" type="checkbox" name="category" value="Другие">
                            <button class="filter-item__btn" type="button">
@@ -956,7 +964,9 @@
                
                         <li class="quize-card quize-card--big furniture" data-category="furniture">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/furniture-1.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/furniture-1.webp" alt="" width="225"
+               
+                              height="310">
                
                            <div>
                
@@ -992,7 +1002,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/shablon-kviza-stoimost-shkafa-kupe/" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/shablon-kviza-stoimost-shkafa-kupe/" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1000,7 +1014,9 @@
                
                         <li class="quize-card quize-card--big kitchen" data-category="kitchen">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/kitchen-1.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/kitchen-1.webp" alt="" width="225"
+               
+                              height="310">
                
                            <div>
                
@@ -1038,7 +1054,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/shablon-kviza-kuhni-na-zakaz/" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/shablon-kviza-kuhni-na-zakaz/" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1046,7 +1066,9 @@
                
                         <li class="quize-card quize-card--big courses" data-category="courses">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/courses-1.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/courses-1.webp" alt="" width="225"
+               
+                              height="310">
                
                            <div>
                
@@ -1084,7 +1106,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/shablon-kviza-igra-na-gitare/" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/shablon-kviza-igra-na-gitare/" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1092,7 +1118,9 @@
                
                         <li class="quize-card quize-card--big interior" data-category="interior">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/interior-2.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/interior-2.webp" alt="" width="225"
+               
+                              height="310">
                
                            <div>
                
@@ -1130,7 +1158,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-dizayn-intererov" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-dizayn-intererov" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1138,7 +1170,7 @@
                
                         <li class="quize-card quize-card--big other" data-category="other">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/other-6.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/other-6.webp" alt="" width="225" height="310">
                
                            <div>
                
@@ -1176,7 +1208,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-detskiy-prazdnik" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-detskiy-prazdnik" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1184,7 +1220,7 @@
                
                         <li class="quize-card realty" data-category="realty">
                
-                           <img class="quize-card__img" src="/images/realty-1.webp" alt="">
+                           <img class="quize-card__img" src="./images/realty-1.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -1220,7 +1256,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-podbora-kvartiry/" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-podbora-kvartiry/" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1228,7 +1268,7 @@
                
                         <li class="quize-card tours" data-category="tours">
                
-                           <img class="quize-card__img" src="/images/tours-1.webp" alt="">
+                           <img class="quize-card__img" src="./images/tours-1.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -1264,7 +1304,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/shablon-kviza-podbor-tura/" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/shablon-kviza-podbor-tura/" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1272,7 +1316,7 @@
                
                         <li class="quize-card other" data-category="other">
                
-                           <img class="quize-card__img" src="/images/other-1.webp" alt="">
+                           <img class="quize-card__img" src="./images/other-1.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -1308,9 +1352,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/na-kakoy-fakultet-hogvarts-ty-popadesh/"
+                           <a class="quize-card__link" href="https://quizle.ru/na-kakoy-fakultet-hogvarts-ty-popadesh/" target="_blank">
                
-                              target="_blank"></a>
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1318,7 +1364,7 @@
                
                         <li class="quize-card health" data-category="health">
                
-                           <img class="quize-card__img" src="/images/health-1.webp" alt="">
+                           <img class="quize-card__img" src="./images/health-1.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -1354,7 +1400,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/test-kakoi-vy-chai/" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/test-kakoi-vy-chai/" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1362,7 +1412,7 @@
                
                         <li class="quize-card quize-card--big other" data-category="other">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/other-7.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/other-7.webp" loading="lazy" alt="" width="225" height="310">
                
                            <div>
                
@@ -1398,7 +1448,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-aromata" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-aromata" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1406,7 +1460,7 @@
                
                         <li class="quize-card quize-card--big health" data-category="health">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/health-2.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/health-2.webp" loading="lazy" alt="" width="225" height="310">
                
                            <div>
                
@@ -1444,7 +1498,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-stomatolog-klinik" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-stomatolog-klinik" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1452,7 +1510,7 @@
                
                         <li class="quize-card interior" data-category="interior">
                
-                           <img class="quize-card__img" src="/images/interior-1.webp" alt="">
+                           <img class="quize-card__img" src="./images/interior-1.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -1488,7 +1546,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-shtor/" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-shtor/" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1496,7 +1558,7 @@
                
                         <li class="quize-card cars" data-category="cars">
                
-                           <img class="quize-card__img" src="/images/cars-1.webp" alt="">
+                           <img class="quize-card__img" src="./images/cars-1.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -1532,7 +1594,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-remont-avto/" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-remont-avto/" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1540,7 +1606,7 @@
                
                         <li class="quize-card quize-card--big cars" data-category="cars">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/cars-3.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/cars-3.webp" loading="lazy" alt="" width="225" height="310">
                
                            <div>
                
@@ -1578,7 +1644,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-stoimost-gruzoperevozok" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-stoimost-gruzoperevozok" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1586,7 +1656,7 @@
                
                         <li class="quize-card furniture" data-category="furniture">
                
-                           <img class="quize-card__img" src="/images/furniture-2.webp" alt="">
+                           <img class="quize-card__img" src="./images/furniture-2.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -1622,7 +1692,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-ustanovka-plastikovyh-okon/" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-ustanovka-plastikovyh-okon/" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1630,7 +1704,7 @@
                
                         <li class="quize-card courses" data-category="courses">
                
-                           <img class="quize-card__img" src="/images/courses-2.webp" alt="">
+                           <img class="quize-card__img" src="./images/courses-2.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -1666,7 +1740,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/test-na-znanie-os-android/" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/test-na-znanie-os-android/" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1674,7 +1752,7 @@
                
                         <li class="quize-card furniture" data-category="furniture">
                
-                           <img class="quize-card__img" src="/images/furniture-3.webp" alt="">
+                           <img class="quize-card__img" src="./images/furniture-3.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -1712,7 +1790,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-matrsa" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-matrsa" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1720,7 +1802,7 @@
                
                         <li class="quize-card courses" data-category="courses">
                
-                           <img class="quize-card__img" src="/images/courses-3.webp" alt="">
+                           <img class="quize-card__img" src="./images/courses-3.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -1756,7 +1838,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-prokachay-svoy-skill" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-prokachay-svoy-skill" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1764,7 +1850,7 @@
                
                         <li class="quize-card courses" data-category="courses">
                
-                           <img class="quize-card__img" src="/images/courses-4.webp" alt="">
+                           <img class="quize-card__img" src="./images/courses-4.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -1802,7 +1888,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-onlayn-professiya" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-onlayn-professiya" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1810,7 +1900,7 @@
                
                         <li class="quize-card cars" data-category="cars">
                
-                           <img class="quize-card__img" src="/images/cars-2.webp" alt="">
+                           <img class="quize-card__img" src="./images/cars-2.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -1846,7 +1936,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-raschet-avtostrahovaniya" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-raschet-avtostrahovaniya" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1854,7 +1948,7 @@
                
                         <li class="quize-card quize-card--big other" data-category="other">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/other-3.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/other-3.webp" loading="lazy" alt="" width="225" height="310">
                
                            <div>
                
@@ -1892,7 +1986,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-platya" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-platya" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1900,7 +1998,7 @@
                
                         <li class="quize-card quize-card--big other" data-category="other">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/other-4.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/other-4.webp" loading="lazy" alt="" width="225" height="310">
                
                            <div>
                
@@ -1936,7 +2034,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-podarka" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-podarka" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1944,7 +2046,7 @@
                
                         <li class="quize-card health" data-category="health">
                
-                           <img class="quize-card__img" src="/images/health-3.webp" alt="">
+                           <img class="quize-card__img" src="./images/health-3.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -1980,7 +2082,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-diety" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-diety" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -1988,7 +2094,9 @@
                
                         <li class="quize-card realty" data-category="realty">
                
-                           <img style="object-position: center;" class="quize-card__img" src="/images/realty-2.webp" alt="">
+                           <img style="object-position: center;" class="quize-card__img" src="./images/realty-2.webp" alt="" width="230"
+               
+                              height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -2024,7 +2132,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-remont-kvartiry" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-remont-kvartiry" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -2032,7 +2144,7 @@
                
                         <li class="quize-card health" data-category="health">
                
-                           <img class="quize-card__img" src="/images/health-4.webp" alt="">
+                           <img class="quize-card__img" src="./images/health-4.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -2068,7 +2180,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-vid-massazha" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-vid-massazha" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -2076,7 +2192,7 @@
                
                         <li class="quize-card other" data-category="other">
                
-                           <img class="quize-card__img" src="/images/other-5.webp" alt="">
+                           <img class="quize-card__img" src="./images/other-5.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -2114,7 +2230,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-landshaftnyi-dizain" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-landshaftnyi-dizain" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -2122,7 +2242,9 @@
                
                         <li class="quize-card quize-card--big courses" data-category="courses">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/courses-5.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/courses-5.webp" alt="" width="225"
+               
+                              height="310" loading="lazy">
                
                            <div>
                
@@ -2158,7 +2280,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/chto-ty-znaesh-o-velikobritanii" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/chto-ty-znaesh-o-velikobritanii" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -2166,7 +2292,7 @@
                
                         <li class="quize-card quize-card--big cars" data-category="cars">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/cars-4.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/cars-4.webp" loading="lazy" alt="" width="225" height="310">
                
                            <div>
                
@@ -2204,7 +2330,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-arendy-avtomobilya" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-arendy-avtomobilya" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -2212,7 +2342,9 @@
                
                         <li class="quize-card other" data-category="other">
                
-                           <img style="object-position: center;" class="quize-card__img" src="/images/other-8.webp" alt="">
+                           <img style="object-position: center;" class="quize-card__img" src="./images/other-8.webp" alt="" width="230"
+               
+                              height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -2250,7 +2382,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-podbor-kredita" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-podbor-kredita" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -2258,7 +2394,9 @@
                
                         <li class="quize-card other" data-category="other">
                
-                           <img style="object-position: center;" class="quize-card__img" src="/images/other-9.webp" alt="">
+                           <img style="object-position: center;" class="quize-card__img" src="./images/other-9.webp" loading="lazy" alt="" width="230"
+               
+                              height="85">
                
                            <div class="quize-card__description">
                
@@ -2294,7 +2432,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-stoimost-yur-uslug" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-stoimost-yur-uslug" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -2302,7 +2444,7 @@
                
                         <li class="quize-card quize-card--big realty" data-category="realty">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/realty-4.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/realty-4.webp" loading="lazy" alt="" width="225" height="310">
                
                            <div>
                
@@ -2342,7 +2484,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-uborka-kvartiry" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-uborka-kvartiry" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -2350,7 +2496,7 @@
                
                         <li class="quize-card furniture" data-category="furniture">
                
-                           <img class="quize-card__img" src="/images/furniture-4.webp" alt="">
+                           <img class="quize-card__img" src="./images/furniture-4.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -2386,7 +2532,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-raschyot-napolnogo-pokrytiya" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-raschyot-napolnogo-pokrytiya" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -2394,7 +2544,7 @@
                
                         <li class="quize-card quize-card--big health" data-category="health">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/health-5.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/health-5.webp" loading="lazy" alt="" width="225" height="310">
                
                            <div>
                
@@ -2430,7 +2580,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-meditsinskie-uslugi" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-meditsinskie-uslugi" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -2438,7 +2592,7 @@
                
                         <li class="quize-card quize-card--big realty" data-category="realty">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/realty-3.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/realty-3.webp"  loading="lazy" alt="" width="225" height="310">
                
                            <div>
                
@@ -2480,7 +2634,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-arenda-pomeshcheniya" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-arenda-pomeshcheniya" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -2488,7 +2646,9 @@
                
                         <li class="quize-card quize-card--big other" data-category="other">
                
-                           <img class="quize-card__img quize-card__img--big" src="/images/other-10.webp" alt="">
+                           <img class="quize-card__img quize-card__img--big" src="./images/other-10.webp" alt="" width="225" height="310"
+               
+                              loading="lazy">
                
                            <div>
                
@@ -2524,7 +2684,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-smartfona" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-vybor-smartfona" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -2532,7 +2696,7 @@
                
                         <li class="quize-card courses" data-category="courses">
                
-                           <img class="quize-card__img" src="/images/courses-6.webp" alt="">
+                           <img class="quize-card__img" src="./images/courses-6.webp" alt="" width="230" height="85" loading="lazy">
                
                            <div class="quize-card__description">
                
@@ -2570,7 +2734,11 @@
                
                            </div>
                
-                           <a class="quize-card__link" href="https://quizle.ru/kviz-onlayn-professiya" target="_blank"></a>
+                           <a class="quize-card__link" href="https://quizle.ru/kviz-onlayn-professiya" target="_blank">
+               
+                              <span class="visually-hidden">Перейти на страницу квиза</span>
+               
+                           </a>
                
                         </li>
                
@@ -2826,7 +2994,11 @@
 
 
 
-                  <div class="site-footer__social js-link" data-href="https://vk.com/wpshop" data-target="_blank">
+                  <a class="site-footer__social js-link" href="https://vk.com/wpshop" target="_blank">
+
+
+
+                     <span class="visually-hidden">Перейти в ВК</span>
 
 
 
@@ -2850,11 +3022,15 @@
 
 
 
-                  </div>
+                  </a>
 
 
 
-                  <div class="site-footer__social js-link" data-href="https://t.me/wpshop" data-target="_blank">
+                  <a class="site-footer__social js-link" href="https://t.me/wpshop" target="_blank">
+
+
+
+                     <span class="visually-hidden">Перейти в Телеграм</span>
 
 
 
@@ -2878,11 +3054,15 @@
 
 
 
-                  </div>
+                  </a>
 
 
 
-                  <div class="site-footer__social js-link" data-href="https://dzen.ru/wpshop" data-target="_blank">
+                  <a class="site-footer__social js-link" href="https://dzen.ru/wpshop" target="_blank">
+
+
+
+                     <span class="visually-hidden">Перейти в Дзен</span>
 
 
 
@@ -2906,15 +3086,19 @@
 
 
 
-                  </div>
+                  </a>
 
 
 
-                  <div class="site-footer__social js-link"
+                  <a class="site-footer__social js-link" href="https://www.youtube.com/channel/UCdx6dJNYORGcqHOXzp5WwEQ"
 
 
 
-                     data-href="https://www.youtube.com/channel/UCdx6dJNYORGcqHOXzp5WwEQ" data-target="_blank">
+                     target="_blank">
+
+
+
+                     <span class="visually-hidden">Перейти в Youtube</span>
 
 
 
@@ -2938,7 +3122,7 @@
 
 
 
-                  </div>
+                  </a>
 
 
 
@@ -2951,6 +3135,10 @@
 
 
                   <a href="https://wpshop.ru/" target="_blank">
+
+
+
+                     <span class="visually-hidden">Перейти на WPShop.ru</span>
 
 
 

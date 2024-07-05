@@ -14,9 +14,6 @@ function startCards() {
       if (currentCategory === 'all' || element.classList.contains(currentCategory)) {
          element.classList.add('quize-card--visible');
          element.style.display = 'flex';
-      } else {
-         element.classList.add('quize-card--visible');
-         element.style.display = 'flex';
       }
    });
 
@@ -25,7 +22,7 @@ function startCards() {
    }
 }
 
-btnLoadMore.addEventListener('click', startCards)
+btnLoadMore.addEventListener('click', startCards);
 
 // Section Q&A - аккордеон
 document.addEventListener('DOMContentLoaded', () => {
@@ -65,23 +62,20 @@ inputLabel.forEach(label => {
    });
 });
 
-function removeActiveClass(item) {
-   item.classList.remove('active');
-}
-
-
 conteinerCategories.addEventListener('click', function (evt) {
    const events = evt.target;
    const btnClick = events.closest('.js-filter-item');
 
    btnWrapCategories.forEach(item => {
       item.classList.remove('active');
+      item.setAttribute('aria-selected', false);
    });
 
    if (btnClick.classList.contains('active')) {
       btnClick.classList.remove('active');
    } else {
       btnClick.classList.add('active');
+      btnClick.setAttribute('aria-selected', true);
    }
 })
 
@@ -140,20 +134,24 @@ function getItemCard(className) {
    let count = 0;
 
    card.forEach(item => {
+      item.style.display = 'none';
+   });
+
+   card.forEach(item => {
       if (item.classList.contains(className)) {
          item.style.display = 'flex'
          count++;
-         if (count > 6) {
-            item.style.display = 'none'
+         if (count >= 6) {
+            // item.style.display = 'none'
             btnLoadMore.style.display = 'block';
+         } else {
+            btnLoadMore.style.display = 'none';
          }
-      } else {
-         item.style.display = 'none'
-         btnLoadMore.style.display = 'none';
       }
+     
+      console.log(currentCategory.length);
    })
 }
-
 
 
 // Кнопка показа фильтров на мобильной версии
