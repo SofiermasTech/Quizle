@@ -2,6 +2,7 @@
 const btnLoadMore = document.querySelector('.section-quize-cards__load-more');
 const cardsLength = document.querySelectorAll('.quize-card').length;
 
+let currentCategory = 'all'; // переменная для хранения текущей выбранной категории
 let cards = 6;
 
 function startCards() {
@@ -10,10 +11,14 @@ function startCards() {
    const visibleCards = arrayCards.slice(0, cards);
 
    visibleCards.forEach(element => {
-      element.classList.add('quize-card--visible');
-      element.style.display = 'flex';
-   }
-   );
+      if (currentCategory === 'all' || element.classList.contains(currentCategory)) {
+         element.classList.add('quize-card--visible');
+         element.style.display = 'flex';
+      } else {
+         element.classList.add('quize-card--visible');
+         element.style.display = 'flex';
+      }
+   });
 
    if (visibleCards.length === cardsLength) {
       btnLoadMore.style.display = 'none';
@@ -25,7 +30,6 @@ btnLoadMore.addEventListener('click', startCards)
 // Section Q&A - аккордеон
 document.addEventListener('DOMContentLoaded', () => {
    const accordions = document.querySelectorAll('.js-accordeon');
-   console.log(accordions);
 
    accordions.forEach(element => {
       element.addEventListener('click', (evt) => {
@@ -130,8 +134,11 @@ function filterCards() {
 filterCards();
 
 function getItemCard(className) {
+   // сохраняем выбранную категорию
+   currentCategory = className;
    // + проверка условия для отображения не более 6 карточек 
    let count = 0;
+
    card.forEach(item => {
       if (item.classList.contains(className)) {
          item.style.display = 'flex'
@@ -146,6 +153,8 @@ function getItemCard(className) {
       }
    })
 }
+
+
 
 // Кнопка показа фильтров на мобильной версии
 function hiddenFilter() {

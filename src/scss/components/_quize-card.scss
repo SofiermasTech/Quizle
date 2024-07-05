@@ -90,7 +90,7 @@
       flex-grow: 1;
 
       &--big {
-         margin-top: 50px;
+         margin-top: 35px;
 
          @include mobile-bottom {
             margin-top: 20px;
@@ -100,7 +100,7 @@
 
    &__title {
       font-size: 20px;
-      margin-bottom: 4px;
+      margin-bottom: 10px;
       line-height: 1.1;
       font-weight: 800;
       color: var(--quizle-text-color);
@@ -108,6 +108,10 @@
       &--big {
          color: var(--quizle-text-color);
       }
+   }
+
+   &__text {
+      font-size: 14px;
    }
 
 }

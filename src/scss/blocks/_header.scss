@@ -56,14 +56,14 @@
       // Такой вариант менее специфичен
       a {
          padding: 15px 22px;
-
          transition: 0.1s;
-
-      @include hover {
-       color: #fff;
-       }
       }
 
+      &.navigation-link-accent a {
+         @include hover {
+            color: #fff;
+         }
+      }
    }
 
    &__header-mobile-link.navigation-link-accent {
