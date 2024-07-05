@@ -26,13 +26,12 @@
    @include tablet {
       width: 80px;
    }
-
-
 }
 
 .rectangle-decor {
    display: inline-block;
    background-color: var(--quizle-accent-light-color);
+   color: var(--quizle-primary-color);
    border-radius: 56px;
    //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;;
    font-family: "Figtree", Arial, Helvetica, sans-serif;
@@ -51,7 +50,7 @@
    @include mobile {
       order: 3;
       border-radius: 12px;
-      height: 90px;
+      height: 99px;
       padding-top: 35px;
       margin-left: 0;
       width: 100%;
@@ -144,5 +143,31 @@
 
    @include mobile {
       display: none;
+   }
+}
+
+.circle-intro-decor {
+   position: absolute;
+   // width: 12px;
+   // height: 12px;
+   background-color: var(--quizle-accent-pink-color);
+   border-radius: 10px;
+   z-index: -1;
+   animation: shine-decor-intro2 infinite alternate;
+}
+
+@keyframes shine-decor-intro2 {
+   0% {
+      opacity: 1;
+      transform: rotate(0deg) translateX(150px);
+      //scale: 1;
+   }
+
+ 
+
+   100% {
+      opacity: 0.5;
+      transform: rotate(360deg) translateX(150px);
+      //scale: 0.5;
    }
 }
