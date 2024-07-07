@@ -2,7 +2,6 @@
 const btnLoadMore = document.querySelector('.section-quize-cards__load-more');
 const cardsLength = document.querySelectorAll('.quize-card').length;
 
-let currentCategory = 'all'; // переменная для хранения текущей выбранной категории
 let cards = 6;
 
 function startCards() {
@@ -11,14 +10,15 @@ function startCards() {
    const visibleCards = arrayCards.slice(0, cards);
 
    visibleCards.forEach(element => {
-      if (currentCategory === 'all' || element.classList.contains(currentCategory)) {
-         element.classList.add('quize-card--visible');
-         element.style.display = 'flex';
-      }
+      element.classList.add('quize-card--visible');
+      element.style.display = 'flex';
+
    });
 
    if (visibleCards.length === cardsLength) {
       btnLoadMore.style.display = 'none';
+   } else {
+      btnLoadMore.style.display = 'block';
    }
 }
 
@@ -63,19 +63,24 @@ inputLabel.forEach(label => {
 });
 
 conteinerCategories.addEventListener('click', function (evt) {
-   const events = evt.target;
-   const btnClick = events.closest('.js-filter-item');
-
-   btnWrapCategories.forEach(item => {
-      item.classList.remove('active');
-      item.setAttribute('aria-selected', false);
-   });
-
-   if (btnClick.classList.contains('active')) {
-      btnClick.classList.remove('active');
+   if (evt.target.tagName !== 'INPUT') {
+      return;
    } else {
-      btnClick.classList.add('active');
-      btnClick.setAttribute('aria-selected', true);
+      console.log(evt.target.tagName);
+      const events = evt.target;
+      const btnClick = events.closest('.js-filter-item');
+
+      btnWrapCategories.forEach(item => {
+         item.classList.remove('active');
+         item.setAttribute('aria-selected', false);
+      });
+
+      if (btnClick.classList.contains('active')) {
+         btnClick.classList.remove('active');
+      } else {
+         btnClick.classList.add('active');
+         btnClick.setAttribute('aria-selected', true);
+      }
    }
 })
 
@@ -87,40 +92,56 @@ const card = cardsArea.querySelectorAll('.quize-card');
 
 function filterCards() {
    conteinerCategories.addEventListener('click', evt => {
-      const dataId = evt.target.id;
+      if (evt.target.id === '') return;
 
+      const dataId = evt.target.id;
+  
+      // сначала скрываем все карточки
+      card.forEach(item => {
+         item.style.display = 'none';
+      });
 
       switch (dataId) {
          case 'all':
-            getItemCard('quize-card')
-            break
+            let counter = 0;
+            card.forEach(item => {
+               // отображаем только первые 6 карточек из категории 'quize-card'
+               if (counter < 6 && item.classList.contains('quize-card')) {
+                  item.style.display = 'flex';
+                  counter++;
+               } else {
+                  item.style.display = 'none';
+                  btnLoadMore.style.display = 'block';
+               }
+            });
+            break;
          case 'furniture':
             getItemCard('furniture')
-            break
+            break;
          case 'realty':
             getItemCard('realty')
-            break
+            break;
          case 'tours':
             getItemCard('tours')
-            break
+            break;
          case 'kitchen':
             getItemCard('kitchen')
-            break
+            break;
          case 'other':
             getItemCard('other')
-            break
+            break;
          case 'health':
             getItemCard('health')
-            break
+            break;
          case 'interior':
             getItemCard('interior')
-            break
+            break;
          case 'cars':
             getItemCard('cars')
-            break
+            break;
          case 'courses':
             getItemCard('courses')
-            break
+            break;
       }
    })
 }
@@ -128,31 +149,15 @@ function filterCards() {
 filterCards();
 
 function getItemCard(className) {
-   // сохраняем выбранную категорию
-   currentCategory = className;
-   // + проверка условия для отображения не более 6 карточек 
-   let count = 0;
-
-   card.forEach(item => {
-      item.style.display = 'none';
-   });
-
    card.forEach(item => {
       if (item.classList.contains(className)) {
-         item.style.display = 'flex'
-         count++;
-         if (count >= 6) {
-            // item.style.display = 'none'
-            btnLoadMore.style.display = 'block';
-         } else {
-            btnLoadMore.style.display = 'none';
-         }
+         item.style.display = 'flex';
+         btnLoadMore.style.display = 'none';
+      } else {
+         item.style.display = 'none';
       }
-
-      console.log(currentCategory.length);
    })
 }
-
 
 // Кнопка показа фильтров на мобильной версии
 function hiddenFilter() {
@@ -198,12 +203,10 @@ function mobileSlider() {
       sliderMobile.dataset.mobile == 'true';
    }
 
-   if (window.innerWidth > 767) {
-      sliderMobile.dataset.mobile == 'false';
-
-      if (sliderMobile.classList.contains('.swiper-initialized')) {
-         mySwiper.destroy();
-      }
+   if (window.innerWidth > 767 && sliderMobile.classList.contains('swiper-initialized')) {
+      mySwiper.destroy();
+      sliderMobile.dataset.mobile = 'false';
+      sliderMobile.classList.remove('swiper-initialized');
    }
 }
 
@@ -226,33 +229,48 @@ function randomCircle(x, y) {
 }
 
 // интервал размеров элемента
-const s = randomCircle(20, 28);
+const s = randomCircle(6, 20);
+const p = randomCircle(0, 100);
 
-// вариант с кружками и транслейтом
-// for (let i = 0; i < 12; i++) {
-//    sectionIntro.innerHTML += '<div class="circle-intro-decor" style=" width: ' + randomCircle(6, 10) + 'px; height: ' + randomCircle(6, 10) + 'px; animation-duration: ' + randomCircle(10, 30) + 's; top: ' + randomCircle(0, 100) + '%; left: ' + randomCircle(0, 100) + '%;"></div>';
-// }
-
-
-// розовые элм. слева
-for (let i = 0; i < 5; i++) {
+// розовые элм.
+for (let i = 0; i < 60; i++) {
    sectionIntro.innerHTML += '<svg class="intro__decor-1" \
-   style=" animation-duration: ' + randomCircle(5, 15) + 's; \
-   top: ' + randomCircle(10, 100) + '%; left: ' + randomCircle(0, 20) + '%; \
-   width: ' + s + 'px; height: ' + s + 'px;"  viewBox="0 0 17 17" fill="none" \
-   xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" \
-   d="M6.80002 3.57002C6.80002 5.4478 5.27778 6.97003 3.40001 6.97003L1.53 6.97003C0.685004 6.97003 -3.34612e-07 7.65504 -3.71548e-07 8.50003V8.50003C-4.08485e-07 9.34503 0.685004 10.03 1.53 10.03L3.40001 10.03C5.27778 10.03 6.80002 11.5523 6.80002 13.43L6.80002 15.47C6.80002 16.315 7.48502 17 8.33002 17V17C9.17501 17 9.86002 16.315 9.86002 15.47L9.86002 13.515C9.86002 11.5903 11.4203 10.03 13.345 10.03L15.47 10.03C16.315 10.03 17 9.34503 17 8.50003V8.50003C17 7.65504 16.315 6.97003 15.47 6.97003L13.345 6.97003C11.4203 6.97003 9.86002 5.40974 9.86002 3.48502L9.86002 1.53C9.86002 0.685004 9.17501 -3.42041e-07 8.33002 -3.78977e-07V-3.78977e-07C7.48502 -4.15913e-07 6.80002 0.685004 6.80002 1.53L6.80002 3.57002Z"\
-   fill="#fb2dc9" fill-opacity=".8" /></svg>';
+   style=" animation-duration: ' + randomCircle(1, 20) + 's; \
+   top: ' + p + '%; right: ' + p + '%; \
+   width: ' + s + 'px; height: ' + s + 'px;" viewBox="0 0 22 22" fill="none"  xmlns="http://www.w3.org/2000/svg"> \
+   <path fill="#fb2dc9" fill-rule="evenodd" \
+   d="M8.8 4.62a4.4 4.4 0 0 1-4.4 4.4H1.98a1.98 1.98 0 0 0 0 3.96H4.4a4.4 4.4 0 0 1 4.4 4.4v2.64a1.98 1.98 0 0 0 3.96 0v-2.53a4.51 4.51 0 0 1 4.51-4.51h2.75a1.98 1.98 0 0 0 0-3.96h-2.75a4.51 4.51 0 0 1-4.51-4.51V1.98a1.98 1.98 0 0 0-3.96 0v2.64Z"\
+   clip-rule="evenodd" /> </svg>';
 };
 
-
-// фиолетовые элм. справа
-for (let i = 0; i < 6; i++) {
+// фиолетовые элм.
+for (let i = 0; i < 60; i++) {
    sectionIntro.innerHTML += '<svg class="intro__decor-5" \
-   style=" animation-duration: ' + randomCircle(5, 15) + 's; \
-   top: ' + randomCircle(0, 80) + '%; right: ' + randomCircle(0, 30) + '%; \
+   style=" animation-duration: ' + randomCircle(1, 20) + 's; opacity: ' + randomCircle(0.1, 0.3) + ';\
+   top: ' + p + '%; right: ' + p + '%; \
    width: ' + s + 'px; height: ' + s + 'px;" viewBox="0 0 22 22" fill="none"  xmlns="http://www.w3.org/2000/svg"> \
    <path fill="#8264FC" fill-rule="evenodd" \
    d="M8.8 4.62a4.4 4.4 0 0 1-4.4 4.4H1.98a1.98 1.98 0 0 0 0 3.96H4.4a4.4 4.4 0 0 1 4.4 4.4v2.64a1.98 1.98 0 0 0 3.96 0v-2.53a4.51 4.51 0 0 1 4.51-4.51h2.75a1.98 1.98 0 0 0 0-3.96h-2.75a4.51 4.51 0 0 1-4.51-4.51V1.98a1.98 1.98 0 0 0-3.96 0v2.64Z"\
    clip-rule="evenodd" /> </svg>';
 };
+
+// Анимация элементов при скролле
+const animationItems = document.querySelectorAll('.scroll-anim-js');
+
+const showScrollItems = () => {
+   const triger = (window.innerHeight / 5) * 4;
+
+   for (const animationItem of animationItems) {
+      const topOfItem = animationItem.getBoundingClientRect().top - 80;
+
+      if (topOfItem < triger) {
+         animationItem.classList.add('show');
+      } else {
+         animationItem.classList.remove('show');
+      }
+   }
+}
+
+showScrollItems();
+
+window.addEventListener('scroll', showScrollItems);

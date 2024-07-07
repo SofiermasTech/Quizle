@@ -108,7 +108,16 @@
          color: white;
          font-weight: 500;
          font-size: 16px;
-         transition: 0.3s;
+         transform: translateX(700%);
+         transition: transform 1s ease, scale 0.3s;
+
+         &:nth-child(even) {
+            transform: translateX(-750%);
+         }
+
+         &.show {
+            transform: translateX(0);
+         }
 
          @include hover {
             scale: 1.03;
@@ -122,6 +131,12 @@
       left: -180px;
       rotate: -12deg;
       z-index: 101;
+      transform: translateX(-400%);
+      transition: transform 0.8s ease;
+
+      &.show {
+         transform: translateX(0);
+      }
 
       @include tablet {
          bottom: -95px;
@@ -154,10 +169,16 @@
 
    &__good-quize {
       position: absolute;
-      bottom: -130px;
+      bottom: -160px;
       right: -210px;
       rotate: 12deg;
       z-index: 101;
+      transform: translateX(400%);
+      transition: transform 1s ease;
+
+      &.show {
+         transform: translateX(0);
+      }
 
       @include tablet {
          bottom: -160px;
@@ -200,6 +221,7 @@
    &__decor-5 {
       position: absolute;
       z-index: -1;
+      
    }
 
    &__decor-1 {
@@ -228,6 +250,8 @@
    }
 
    &__decor-3 {
+      width: 30px;
+      height: 30px;
       left: 131px;
       bottom: 218px;
       animation: shine-decor-intro 4s linear infinite alternate;
@@ -243,11 +267,15 @@
       }
 
       @include mobile {
-         bottom: 66%;
+         bottom: 80%;
+         left: 74px;
+         z-index: 10;
       }
    }
 
    &__decor-4 {
+      width: 30px;
+      height: 30px;
       right: 366px;
       bottom: 360px;
       animation: shine-decor-intro 5s linear infinite alternate;
@@ -263,8 +291,9 @@
       }
 
       @include mobile {
-         right: 25px;
-         bottom: 65%;
+         right: 84px;
+         bottom: 78%;
+         z-index: 11;
       }
    }
 
@@ -276,12 +305,12 @@
 
 @keyframes shine-decor-intro {
    0% {
-      opacity: 0.2;
+      opacity: 0;
       scale: 0.8;
    }
 
    100% {
-      opacity: 0.8;
-      scale: 1.1;
+      opacity: 0.3;
+      scale: 1;
    }
 }

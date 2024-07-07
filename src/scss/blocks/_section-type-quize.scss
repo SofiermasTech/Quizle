@@ -149,6 +149,14 @@
       background-color: var(--quizle-accent-pink-color);
       z-index: 99;
       border-radius: 12px;
+      transform: translateY(60px);
+      opacity: 0;
+      transition: 0.3s ease-in;
+
+      &.show {
+         opacity: 1;
+         transform: translateY(0);
+      }
 
       @include desktop-bottom {
          bottom: -81px;

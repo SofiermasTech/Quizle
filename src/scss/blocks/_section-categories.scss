@@ -31,6 +31,12 @@
       top: 130px;
       right: 20px;
       transform: rotate(21deg);
+      opacity: 0;
+      transition: 0.9s ease;
+
+      &.show {
+         opacity: 1;
+      }
 
       @include tablet-bottom {
          right: 45px;
@@ -120,6 +126,7 @@
    -webkit-transition: all .3s ease-out;
    transition: all .3s ease-out;
 
+
    @include hover {
       background-color: var(--quizle-primary-color);
    }
@@ -158,7 +165,7 @@
 
    &.active {
       background-color: var(--quizle-primary-color);
-      pointer-events: none;
+      
 
       & .filter-item__label {
          color: #fff;

@@ -178,6 +178,14 @@
       position: relative;
       user-select: none;
       transition: 0.2s;
+      transform: translateX(400%);
+      opacity: 0;
+      transition: 0.9s ease;
+
+      &.show {
+         opacity: 1;
+         transform: translateX(0);
+      }
 
       @include hover {
          opacity: 1;
