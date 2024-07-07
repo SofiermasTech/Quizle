@@ -230,13 +230,12 @@ function randomCircle(x, y) {
 
 // интервал размеров элемента
 const s = randomCircle(6, 20);
-const p = randomCircle(0, 100);
 
 // розовые элм.
 for (let i = 0; i < 60; i++) {
    sectionIntro.innerHTML += '<svg class="intro__decor-1" \
    style=" animation-duration: ' + randomCircle(1, 20) + 's; \
-   top: ' + p + '%; right: ' + p + '%; \
+   top: ' + randomCircle(0, 100) + '%; right: ' + randomCircle(0, 100) + '%; \
    width: ' + s + 'px; height: ' + s + 'px;" viewBox="0 0 22 22" fill="none"  xmlns="http://www.w3.org/2000/svg"> \
    <path fill="#fb2dc9" fill-rule="evenodd" \
    d="M8.8 4.62a4.4 4.4 0 0 1-4.4 4.4H1.98a1.98 1.98 0 0 0 0 3.96H4.4a4.4 4.4 0 0 1 4.4 4.4v2.64a1.98 1.98 0 0 0 3.96 0v-2.53a4.51 4.51 0 0 1 4.51-4.51h2.75a1.98 1.98 0 0 0 0-3.96h-2.75a4.51 4.51 0 0 1-4.51-4.51V1.98a1.98 1.98 0 0 0-3.96 0v2.64Z"\
@@ -247,7 +246,7 @@ for (let i = 0; i < 60; i++) {
 for (let i = 0; i < 60; i++) {
    sectionIntro.innerHTML += '<svg class="intro__decor-5" \
    style=" animation-duration: ' + randomCircle(1, 20) + 's; opacity: ' + randomCircle(0.1, 0.3) + ';\
-   top: ' + p + '%; right: ' + p + '%; \
+   top: ' + randomCircle(0, 100) + '%; right: ' + randomCircle(0, 100) + '%; \
    width: ' + s + 'px; height: ' + s + 'px;" viewBox="0 0 22 22" fill="none"  xmlns="http://www.w3.org/2000/svg"> \
    <path fill="#8264FC" fill-rule="evenodd" \
    d="M8.8 4.62a4.4 4.4 0 0 1-4.4 4.4H1.98a1.98 1.98 0 0 0 0 3.96H4.4a4.4 4.4 0 0 1 4.4 4.4v2.64a1.98 1.98 0 0 0 3.96 0v-2.53a4.51 4.51 0 0 1 4.51-4.51h2.75a1.98 1.98 0 0 0 0-3.96h-2.75a4.51 4.51 0 0 1-4.51-4.51V1.98a1.98 1.98 0 0 0-3.96 0v2.64Z"\
