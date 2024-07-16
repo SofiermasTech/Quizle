@@ -1,11 +1,11 @@
 .section-qa {
    padding-block: var(--section-padding-y);
 
-& .circle-decor {
-   @include mobile {
-      rotate: 21deg;
+   & .circle-decor {
+      @include mobile {
+         rotate: 21deg;
+      }
    }
-}
 
    &__subtitle {
       line-height: 1.6;
@@ -159,7 +159,6 @@
       }
    }
 
-
    &__item-title {
       @include fluid-text(24, 20);
       margin: 0;
@@ -188,5 +187,4 @@
          font-weight: 700;
       }
    }
-
 }

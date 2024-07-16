@@ -6,7 +6,9 @@
 
 .humburger {
    top: 50%;
-   transform: translateY(-50%);
+   -webkit-transform: translateY(-50%);
+       -ms-transform: translateY(-50%);
+           transform: translateY(-50%);
 }
 
 .site-branding {
@@ -20,7 +22,6 @@
 }
 
 .site-title {
-   //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
    font-family: 'Figtree', Arial, Helvetica, sans-serif;
    color: var(--quizle-primary-color);
    font-weight: 900;
@@ -29,9 +30,10 @@
 
 .header-flex {
    @include flex-row-between;
-   align-items: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
 }
-
 
 .main-navigation {
    margin-bottom: 0;
@@ -45,17 +47,25 @@
    &__list {
       margin-left: 0;
       margin-right: 0;
-      justify-content: flex-end;
-      align-items: center;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       gap: 20px;
    }
 
    &__list-item {
+      -webkit-transition: color 3s linear;
+      -o-transition: color 3s linear;
       transition: color 3s linear;
 
       // Такой вариант менее специфичен
       a {
          padding: 15px 22px;
+         -webkit-transition: 0.1s;
+         -o-transition: 0.1s;
          transition: 0.1s;
       }
 
@@ -75,6 +85,8 @@
       }
 
       @include tablet {
+         display: -webkit-box;
+         display: -ms-flexbox;
          display: flex;
       }
    }
@@ -84,14 +96,18 @@
    padding: 0;
 }
 
-
 // Мобильное меню
 .mobile-menu-placeholder {
    background-color: var(--quizle-primary-color);
 
    ul {
-      flex-direction: row;
-      justify-content: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       padding: 20px;
       background-color: var(--quizle-primary-color);
    }
@@ -108,7 +124,6 @@
          }
       }
    }
-
 }
 
 // Вопрос: у вас в разметке определены заранее псевдоэлементы для некоторых тегов, 

@@ -1,3 +1,26 @@
+// Video-section popup
+const videoPopup = document.querySelector('.section-video__video');
+const btnCloseVideo = document.querySelector('.section-video__btn-close');
+const btnOpenVideo = document.querySelector('.section-video__btn-play');
+
+function toggleVideo() {
+   videoPopup.classList.toggle('video-show');
+   document.addEventListener('keydown', closeVideoEsc);
+}
+
+const closeVideoEsc = function (evt) {
+   if (evt.key === 'Escape') {
+      toggleVideo();
+   }
+}
+
+videoPopup.addEventListener('mousedown', (evt) => {
+   if (evt.target === evt.currentTarget) {
+      toggleVideo();
+   }
+});
+
+
 // Кнопка показать еще
 const btnLoadMore = document.querySelector('.section-quize-cards__load-more');
 const cardsLength = document.querySelectorAll('.quize-card').length;
@@ -95,7 +118,7 @@ function filterCards() {
       if (evt.target.id === '') return;
 
       const dataId = evt.target.id;
-  
+
       // сначала скрываем все карточки
       card.forEach(item => {
          item.style.display = 'none';
@@ -191,8 +214,9 @@ function mobileSlider() {
          wrapperClass: 'section-type-question__cards-wrapper',
          direction: 'horizontal',
          loop: true,
-         spaceBetween: 20,
+         spaceBetween: 40,
          slidesPerView: 1,
+         autoHeight: true,
          pagination: {
             el: '.swiper-pagination',
             type: 'bullets',
@@ -229,12 +253,12 @@ function randomCircle(x, y) {
 }
 
 // интервал размеров элемента
-const s = randomCircle(6, 20);
+const s = randomCircle(6, 16);
 
 // розовые элм.
-for (let i = 0; i < 60; i++) {
+for (let i = 0; i < 50; i++) {
    sectionIntro.innerHTML += '<svg class="intro__decor-1" \
-   style=" animation-duration: ' + randomCircle(1, 20) + 's; \
+   style=" animation-duration: ' + randomCircle(1, 20) + 's; opacity: ' + randomCircle(0.1, 0.2) + '; \
    top: ' + randomCircle(0, 100) + '%; right: ' + randomCircle(0, 100) + '%; \
    width: ' + s + 'px; height: ' + s + 'px;" viewBox="0 0 22 22" fill="none"  xmlns="http://www.w3.org/2000/svg"> \
    <path fill="#fb2dc9" fill-rule="evenodd" \
@@ -243,9 +267,9 @@ for (let i = 0; i < 60; i++) {
 };
 
 // фиолетовые элм.
-for (let i = 0; i < 60; i++) {
+for (let i = 0; i < 50; i++) {
    sectionIntro.innerHTML += '<svg class="intro__decor-5" \
-   style=" animation-duration: ' + randomCircle(1, 20) + 's; opacity: ' + randomCircle(0.1, 0.3) + ';\
+   style=" animation-duration: ' + randomCircle(1, 20) + 's; opacity: ' + randomCircle(0.1, 0.2) + ';\
    top: ' + randomCircle(0, 100) + '%; right: ' + randomCircle(0, 100) + '%; \
    width: ' + s + 'px; height: ' + s + 'px;" viewBox="0 0 22 22" fill="none"  xmlns="http://www.w3.org/2000/svg"> \
    <path fill="#8264FC" fill-rule="evenodd" \

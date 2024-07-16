@@ -101,14 +101,12 @@
 
       h3 {
          @include fluid-text(24, 18);
-
          font-weight: 900;
          margin: 0 0 15px;
       }
 
       p {
          @include fluid-text(18, 16);
-
          font-weight: 500;
       }
    }

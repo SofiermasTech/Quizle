@@ -87,15 +87,16 @@
       top: -20px;
       right: calc(50% - 20px);
    }
-
 }
 
 .crm {
    grid-area: crm;
    width: 100%;
    height: 100%;
-   justify-self: end;
-   align-self: center;
+   -ms-grid-column-align: end;
+       justify-self: end;
+   -ms-grid-row-align: center;
+       align-self: center;
    padding: 20px 15px;
 
    @include desktop-bottom {
@@ -110,7 +111,6 @@
       display: inline-block;
       vertical-align: bottom;
       margin-right: 5px;
-
 
       @include desktop-bottom {
          position: absolute;
@@ -130,18 +130,33 @@
 
    &__list {
       padding: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       gap: 20px;
 
       @include desktop-bottom {
-         flex-direction: row;
-         justify-content: center;
+         -webkit-box-orient: horizontal;
+         -webkit-box-direction: normal;
+             -ms-flex-direction: row;
+                 flex-direction: row;
+         -webkit-box-pack: center;
+             -ms-flex-pack: center;
+                 justify-content: center;
       }
 
       @include mobile {
-         flex-direction: column;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+             -ms-flex-direction: column;
+                 flex-direction: column;
          gap: 15px;
       }
    }
@@ -160,14 +175,25 @@
    border-radius: 10px;
    padding: 26px;
    vertical-align: text-bottom;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: flex-start;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: start;
+       -ms-flex-align: start;
+           align-items: flex-start;
 
    @include tablet-bottom {
       padding: 30px;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
    }
 
    &--btn-buy {
@@ -176,15 +202,26 @@
       padding: 0;
       color: #fff;
       position: relative;
-      user-select: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      -webkit-transition: 0.2s;
+      -o-transition: 0.2s;
       transition: 0.2s;
-      transform: translateX(400%);
+      -webkit-transform: translateX(400%);
+          -ms-transform: translateX(400%);
+              transform: translateX(400%);
       opacity: 0;
+      -webkit-transition: 0.9s ease;
+      -o-transition: 0.9s ease;
       transition: 0.9s ease;
 
       &.show {
          opacity: 1;
-         transform: translateX(0);
+         -webkit-transform: translateX(0);
+             -ms-transform: translateX(0);
+                 transform: translateX(0);
       }
 
       @include hover {
@@ -192,14 +229,12 @@
          scale: 1;
        }
 
-
       @include tablet-bottom {
          & .btn-buy__icon {
             bottom: -41px;
             right: -25px;
          }
       }
-
    }
 
    & .navigation-link-accent {
@@ -207,6 +242,8 @@
 
       & a {
          color: #fff;
+         -webkit-transition: all 0.2s;
+         -o-transition: all 0.2s;
          transition: all 0.2s;
       }
 
@@ -217,7 +254,6 @@
       }
 
    }
-
 }
 
 .item2 {

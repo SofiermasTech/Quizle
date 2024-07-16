@@ -43,7 +43,6 @@
       }
    }
 
-
    &__circle-decor {
       top: 0;
       left: 60px;
@@ -77,7 +76,6 @@
       @include tablet {
          margin-bottom: 40px;
       }
-
    }
 
    &__block-benifits {
@@ -89,10 +87,17 @@
       max-width: 735px;
       list-style: none;
       text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       gap: 20px;
 
       @include desktop-bottom {
@@ -108,15 +113,25 @@
          color: white;
          font-weight: 500;
          font-size: 16px;
-         transform: translateX(700%);
+         -webkit-transform: translateX(700%);
+             -ms-transform: translateX(700%);
+                 transform: translateX(700%);
+         -webkit-transition: scale 0.3s, -webkit-transform 1s ease;
+         transition: scale 0.3s, -webkit-transform 1s ease;
+         -o-transition: transform 1s ease, scale 0.3s;
          transition: transform 1s ease, scale 0.3s;
+         transition: transform 1s ease, scale 0.3s, -webkit-transform 1s ease;
 
          &:nth-child(even) {
-            transform: translateX(-750%);
+            -webkit-transform: translateX(-750%);
+                -ms-transform: translateX(-750%);
+                    transform: translateX(-750%);
          }
 
          &.show {
-            transform: translateX(0);
+            -webkit-transform: translateX(0);
+                -ms-transform: translateX(0);
+                    transform: translateX(0);
          }
 
          @include hover {
@@ -131,11 +146,19 @@
       left: -180px;
       rotate: -12deg;
       z-index: 101;
-      transform: translateX(-400%);
+      -webkit-transform: translateX(-400%);
+          -ms-transform: translateX(-400%);
+              transform: translateX(-400%);
+      -webkit-transition: -webkit-transform 0.8s ease;
+      transition: -webkit-transform 0.8s ease;
+      -o-transition: transform 0.8s ease;
       transition: transform 0.8s ease;
+      transition: transform 0.8s ease, -webkit-transform 0.8s ease;
 
       &.show {
-         transform: translateX(0);
+         -webkit-transform: translateX(0);
+             -ms-transform: translateX(0);
+                 transform: translateX(0);
       }
 
       @include tablet {
@@ -173,11 +196,19 @@
       right: -210px;
       rotate: 12deg;
       z-index: 101;
-      transform: translateX(400%);
+      -webkit-transform: translateX(400%);
+          -ms-transform: translateX(400%);
+              transform: translateX(400%);
+      -webkit-transition: -webkit-transform 1s ease;
+      transition: -webkit-transform 1s ease;
+      -o-transition: transform 1s ease;
       transition: transform 1s ease;
+      transition: transform 1s ease, -webkit-transform 1s ease;
 
       &.show {
-         transform: translateX(0);
+         -webkit-transform: translateX(0);
+             -ms-transform: translateX(0);
+                 transform: translateX(0);
       }
 
       @include tablet {
@@ -221,11 +252,11 @@
    &__decor-5 {
       position: absolute;
       z-index: -1;
-      
    }
 
    &__decor-1 {
-      animation: shine-decor-intro infinite alternate;
+      -webkit-animation: shine-decor-intro infinite alternate;
+              animation: shine-decor-intro infinite alternate;
    }
 
    &__decor-2 {
@@ -233,7 +264,8 @@
       top: 115px;
       width: 30px;
       height: 30px;
-      animation: shine-decor-intro 3s linear infinite alternate;
+      -webkit-animation: shine-decor-intro 3s linear infinite alternate;
+              animation: shine-decor-intro 3s linear infinite alternate;
 
       @include desktop-bottom {
          right: 120px;
@@ -254,7 +286,8 @@
       height: 30px;
       left: 131px;
       bottom: 218px;
-      animation: shine-decor-intro 4s linear infinite alternate;
+      -webkit-animation: shine-decor-intro 4s linear infinite alternate;
+              animation: shine-decor-intro 4s linear infinite alternate;
 
       @include desktop-bottom {
          left: 85px;
@@ -278,7 +311,8 @@
       height: 30px;
       right: 366px;
       bottom: 360px;
-      animation: shine-decor-intro 5s linear infinite alternate;
+      -webkit-animation: shine-decor-intro 5s linear infinite alternate;
+              animation: shine-decor-intro 5s linear infinite alternate;
 
       @include desktop-bottom {
          right: 205px;
@@ -298,9 +332,21 @@
    }
 
    &__decor-5 {
-      animation: shine-decor-intro infinite alternate;
+      -webkit-animation: shine-decor-intro infinite alternate;
+              animation: shine-decor-intro infinite alternate;
+   }
+}
+
+@-webkit-keyframes shine-decor-intro {
+   0% {
+      opacity: 0;
+      scale: 0.8;
    }
 
+   100% {
+      opacity: 0.3;
+      scale: 1;
+   }
 }
 
 @keyframes shine-decor-intro {

@@ -7,7 +7,8 @@
    border-radius: 50%;
    vertical-align: middle;
    z-index: 3;
-   flex-shrink: 0;
+   -ms-flex-negative: 0;
+       flex-shrink: 0;
 
    @include tablet {
       width: 70px;
@@ -20,7 +21,9 @@
    height: 42px;
    position: absolute;
    top: 50%;
-   transform: translate(20%, -50%);
+   -webkit-transform: translate(20%, -50%);
+       -ms-transform: translate(20%, -50%);
+           transform: translate(20%, -50%);
    vertical-align: middle;
 
    @include tablet {
@@ -33,7 +36,6 @@
    background-color: var(--quizle-accent-light-color);
    color: var(--quizle-primary-color);
    border-radius: 56px;
-   //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;;
    font-family: "Figtree", Arial, Helvetica, sans-serif;
    @include fluid-text(70, 38);
    text-align: center;
@@ -48,7 +50,9 @@
    }
 
    @include mobile {
-      order: 3;
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3;
       border-radius: 12px;
       height: 99px;
       padding-top: 35px;
@@ -62,14 +66,16 @@
       background-color: var(--quizle-primary-color);
       color: var(--quizle-primary-color-text);
       border-radius: 30px;
-      //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;;
       font-family: "Figtree", Arial, Helvetica, sans-serif;
       font-size: 18px;
       position: absolute;
       top: -23px;
       right: -30px;
       font-weight: 500;
-      animation:
+      -webkit-animation:
+         top-transform-decor-intro 1s,
+         rotate-decor-intro 1s ease-in-out 2;
+              animation:
          top-transform-decor-intro 1s,
          rotate-decor-intro 1s ease-in-out 2;
 
@@ -80,20 +86,57 @@
       @include mobile {
          right: calc(50% - 76px);
          top: -15px;
-
       }
+   }
+}
+
+@-webkit-keyframes top-transform-decor-intro {
+   0% {
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+      scale: 1.7;
+   }
+
+   100% {
+      -webkit-transform: translateY(5%);
+              transform: translateY(5%);
+      scale: 1;
    }
 }
 
 @keyframes top-transform-decor-intro {
    0% {
-      transform: translateY(-100%);
+      -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
       scale: 1.7;
    }
 
    100% {
-      transform: translateY(5%);
+      -webkit-transform: translateY(5%);
+              transform: translateY(5%);
       scale: 1;
+   }
+}
+
+@-webkit-keyframes rotate-decor-intro {
+   0% {
+      rotate: 5deg;
+   }
+
+   25% {
+      rotate: -5deg;
+   }
+
+   50% {
+      rotate: 5deg;
+   }
+
+   75% {
+      rotate: -5deg;
+   }
+
+   100% {
+      rotate: 5deg;
    }
 }
 
@@ -148,26 +191,37 @@
 
 .circle-intro-decor {
    position: absolute;
-   // width: 12px;
-   // height: 12px;
    background-color: var(--quizle-accent-pink-color);
    border-radius: 10px;
    z-index: -1;
-   animation: shine-decor-intro2 infinite alternate;
+   -webkit-animation: shine-decor-intro2 infinite alternate;
+           animation: shine-decor-intro2 infinite alternate;
+}
+
+@-webkit-keyframes shine-decor-intro2 {
+   0% {
+      opacity: 1;
+      -webkit-transform: rotate(0deg) translateX(150px);
+              transform: rotate(0deg) translateX(150px);
+   }
+
+   100% {
+      opacity: 0.5;
+      -webkit-transform: rotate(360deg) translateX(150px);
+              transform: rotate(360deg) translateX(150px);
+   }
 }
 
 @keyframes shine-decor-intro2 {
    0% {
       opacity: 1;
-      transform: rotate(0deg) translateX(150px);
-      //scale: 1;
+      -webkit-transform: rotate(0deg) translateX(150px);
+              transform: rotate(0deg) translateX(150px);
    }
-
- 
 
    100% {
       opacity: 0.5;
-      transform: rotate(360deg) translateX(150px);
-      //scale: 0.5;
+      -webkit-transform: rotate(360deg) translateX(150px);
+              transform: rotate(360deg) translateX(150px);
    }
 }
