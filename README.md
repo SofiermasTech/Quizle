@@ -1,5 +1,6 @@
 # Страница для продаж плагина "Quizle"
-![image](https://github.com/SofiermasTech/Quizle/assets/112267778/9a05944e-9d5b-416c-b4e6-335ffe381aed)
+
+![alt text](image.png)
 
 
 ### Что сделано
